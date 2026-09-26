@@ -17,7 +17,7 @@ Read [`TDX_NODE_CAPABILITY_REPORT.md`](TDX_NODE_CAPABILITY_REPORT.md) for the co
 - `manifests/`: baselines, audits, the final machine-readable capability matrix, and the CSR-84 universe/capital/holders evidence.
 - `raw/`: raw API/HTTP response samples used by the report.
 - `automation/`: installer/UI inspection helpers and GitHub repo setup.
-- `archivist/`: forward-PIT daily archivist (`daily_archive.py` + `run_daily.ps1`); registered as Windows scheduled task `tdx-archivist` (daily 20:30). Snapshots land in the git-ignored `archive/YYYYMMDD/` with per-artifact SHA256 manifests.
+- `archivist/`: forward-PIT daily archivist (`daily_archive.py` + `run_daily.ps1`); registered as Windows scheduled task `tdx-archivist` (daily 20:30; rebuildable via `automation/register_archivist.ps1`). Snapshots land in the git-ignored `archive/YYYYMMDD/` with per-artifact SHA256 manifests, a COMPLETE/PARTIAL/FAILED day ladder and SUCCESS_NONEMPTY/SUCCESS_EMPTY/FAILED per-request outcomes. First-day smoke summary: `manifests/archivist_smoke_20260926.json`.
 - `.learnings/`: operational findings and resolved errors.
 
 ## Follow-up evidence (2026-09-26, CSR-84 universe)

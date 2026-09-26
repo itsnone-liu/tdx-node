@@ -40,3 +40,10 @@ Corrections, insights, and knowledge gaps captured during development.
 - Correct handling: `dv.reset_index().to_dict('records')`, then stringify `Date` timestamps.
 - Related trap: universe files that are objects (`{'codes': [...]}`) must be unwrapped before iterating — a raw `for x in dict` iterates keys and produces `codestr error` per key.
 - `get_stock_list(market, list_type)`: only `list_type=1` works and already returns Code+Name dicts; `list_type=2/3` return empty lists silently.
+
+## [LRN-20260926-006] PIT archive audit hardening
+
+- **Category**: best_practice
+- Provenance strings in manifests must be generated from the actual call, not hand-written beside it — v1.0 recorded `list_type=2` while calling with `list_type=1` after a bugfix; the metadata silently diverged (caught by external audit).
+- A bare `status: complete` is meaningless for PIT archives: classify every fetch as SUCCESS_NONEMPTY / SUCCESS_EMPTY / FAILED (no-record ≠ fetch-failure) and gate a COMPLETE day on zero failures plus SHA re-verification.
+- Client file-name prefixes differ per download kind (`etfpcf<code>_<date>`, `lhb<code>`, `lockshare<code>`, `holders<code>_<year>`); centralize them in one helper or misclassification follows.

@@ -1,0 +1,25 @@
+{
+ "date": "20260926",
+ "archivist_version": "1.1.0",
+ "status": "COMPLETE",
+ "expected": 221,
+ "successful": 221,
+ "success_nonempty": 130,
+ "success_empty": 91,
+ "failed": 0,
+ "sha_verified": 130,
+ "sha_failures": 0,
+ "note": "smoke summary of the git-ignored archive day directory; full manifest lives in archive/20260926/manifest.json on the node",
+ "scheduled_task": {
+  "name": "tdx-archivist",
+  "time": "20:30",
+  "enabled": true,
+  "re registrable via": "automation/register_archivist.ps1"
+ },
+ "audit_fix_applied": [
+  "request strings mirror actual calls (list_type=1)",
+  "COMPLETE/PARTIAL/FAILED ladder with frozen completeness counters",
+  "SUCCESS_NONEMPTY / SUCCESS_EMPTY / FAILED separation (bugs found and fixed: pcf etfpcf prefix KeyError, holders <code>_<year> source name)",
+  "sha256 re-verification pass at end of run"
+ ]
+}

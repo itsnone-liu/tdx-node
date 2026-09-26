@@ -61,12 +61,22 @@
 - 五组均衡（组内每股最少 15–22 个快照），无组偏差。
 - 内容字段：排名 pm、名称 name、持股数 cgsl、比例 cgbl；gd 与 ltgd 双表同日成对。
 
-## 三、Forward-PIT daily archivist（已上线）
+## 三、Forward-PIT daily archivist（已上线，审计加固后 v1.1.0）
 
-- 脚本：`archivist/daily_archive.py` + `run_daily.ps1`；计划任务 `tdx-archivist`（每日 20:30，Interactive）。
+- 脚本：`archivist/daily_archive.py` + `run_daily.ps1`；计划任务 `tdx-archivist`（每日 20:30，Interactive），可用 `automation/register_archivist.ps1` 幂等重建。
 - 每日采集：ETF 全列表(31)、沪深300成份(23)、两融分类(56/57 标签未定)、ETF watchlist PCF(type=2)、84 案例当日股本快照、watchlist LHB(6)/解禁(7)、十大股东(1, 每周一)。
-- 每件产物带 `retrieved_at/request/sha256/bytes` 写入 `archive/<YYYYMMDD>/manifest.json`（数据目录 git-ignored）；幂等，`--force` 重跑。
+- 每件产物带 `retrieved_at/request/sha256/bytes/outcome` 写入 `archive/<YYYYMMDD>/manifest.json`（数据目录 git-ignored）；幂等，`--force` 重跑。
 - 自启动链：17709 不通时自动拉起隔离客户端并等待就绪（依赖客户端自身记住登录，全程不触碰凭据）。
+
+### ARCHIVIST-AUDIT-FIX（2026-09-26，外部审计后落地）
+
+1. manifest `request` 字符串与真实调用一致（`list_type=1`）。
+2. 日状态三级：`COMPLETE`（全部 mandatory 请求成功且 SHA 复验通过）/ `PARTIAL`（部分失败）/ `FAILED`（fatal）；冻结计数块 `expected_requests / successful_requests / success_nonempty / success_empty / failed_requests / sha_verified / sha_failures`。
+3. 每次抓取三分类 `SUCCESS_NONEMPTY / SUCCESS_EMPTY / FAILED`——"当日无记录"与"抓取失败"是两种事实，永不混同。
+4. 归档尾部 SHA256 重读复验，不通过降级 PARTIAL。
+5. 首日轻量审计摘要入库：`manifests/archivist_smoke_20260926.json`；计划任务注册脚本入库：`automation/register_archivist.ps1`。
+
+首日重跑结果（v1.1.0，20260926）：**COMPLETE**，expected=221 / successful=221 / nonempty=130 / empty=91 / failed=0 / sha_verified=130。修补过程额外发现并修复两个真 bug（pcf 源前缀 `etfpcf` KeyError、holders 源名 `holders<code>_<year>` 被误分类为空）。
 
 ## 红线（永久）
 
