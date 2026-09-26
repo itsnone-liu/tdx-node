@@ -46,6 +46,7 @@ venv/
 
 # Machine-specific inventory and local tool state
 /manifests/pre_install_root_dirs.json
+/archive/
 .jspace/
 .DS_Store
 Thumbs.db

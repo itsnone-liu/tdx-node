@@ -32,3 +32,11 @@ Corrections, insights, and knowledge gaps captured during development.
 - Signed `TdxW.exe` menu resources can be loaded read-only to recover stable menu command IDs; this was more reliable than visual-model menu guessing or coordinate clicks.
 - Verified IDs: 9279 = 盘后数据下载; 9264 = 专业财务数据.
 - Treat GUI as control-plane fallback; embedded Chromium download pages expose little useful UIA structure.
+
+## [LRN-20260926-005] tqcenter return-type traps
+
+- **Category**: best_practice
+- `get_divid_factors` returns a **pandas DataFrame** (dates on the index named `Date`, columns Type/Bonus/AllotPrice/ShareBonus/Allotment). Iterating it yields column-name strings and crashes with `AttributeError: 'str' object has no attribute 'get'`; an empty DataFrame silently "works", hiding the bug (688521 passed by luck).
+- Correct handling: `dv.reset_index().to_dict('records')`, then stringify `Date` timestamps.
+- Related trap: universe files that are objects (`{'codes': [...]}`) must be unwrapped before iterating — a raw `for x in dict` iterates keys and produces `codestr error` per key.
+- `get_stock_list(market, list_type)`: only `list_type=1` works and already returns Code+Name dicts; `list_type=2/3` return empty lists silently.

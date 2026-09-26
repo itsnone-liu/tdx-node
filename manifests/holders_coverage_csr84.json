@@ -1,0 +1,6369 @@
+{
+ "captured_at": "2026-09-26T03:28:27.428461+00:00",
+ "universe_source": "D:\\tdx-node\\manifests\\csr84_universe.json",
+ "years": [
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "disclaimer": "content coverage only; holder snapshot dates are NOT publication dates; PIT requires official announcement-date join",
+ "stocks": {
+  "000078.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000078_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000078_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000078_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000078_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000078_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000078_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "000089.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000089_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000089_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000089_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000089_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000089_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000089_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "000539.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000539_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000539_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000539_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000539_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000539_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000539_2026.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "000557.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000557_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000557_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000557_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000557_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000557_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000557_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "000603.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000603_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210210",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000603_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000603_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000603_2024.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20240105",
+     "last": "20241231",
+     "ltgd_dates": 6,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000603_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000603_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 26,
+   "earliest": "20210210",
+   "latest": "20260630"
+  },
+  "000628.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000628_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000628_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000628_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000628_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000628_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000628_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "000685.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000685_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000685_2022.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 6,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000685_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000685_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240126",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000685_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000685_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260821",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 1
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 26,
+   "earliest": "20210331",
+   "latest": "20260821"
+  },
+  "000709.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000709_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000709_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000709_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000709_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000709_2025.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20250318",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000709_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "000750.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000750_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000750_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000750_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000750_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000750_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000750_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "000783.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000783_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000783_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 11
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000783_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000783_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000783_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000783_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260804",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260804"
+  },
+  "000825.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000825_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000825_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000825_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000825_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000825_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders000825_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002160.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002160_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210129",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002160_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002160_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230117",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002160_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002160_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002160_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210129",
+   "latest": "20260630"
+  },
+  "002185.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002185_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002185_2022.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002185_2023.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20230131",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002185_2024.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20240123",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002185_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002185_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 32,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002354.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002354_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002354_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002354_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002354_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002354_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002354_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002391.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002391_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002391_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002391_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002391_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240131",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002391_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002391_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002440.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002440_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002440_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002440_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002440_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002440_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002440_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002471.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002471_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002471_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002471_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002471_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002471_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002471_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002497.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002497_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210114",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002497_2022.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20220310",
+     "last": "20221231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002497_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002497_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240219",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002497_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002497_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 27,
+   "earliest": "20210114",
+   "latest": "20260630"
+  },
+  "002574.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002574_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002574_2022.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002574_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002574_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002574_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002574_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002693.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002693_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002693_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002693_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002693_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002693_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002693_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002695.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002695_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002695_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002695_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002695_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002695_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002695_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260721",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260721"
+  },
+  "002719.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002719_2021.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20210104",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002719_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220207",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002719_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002719_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002719_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002719_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210104",
+   "latest": "20260630"
+  },
+  "002736.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002736_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002736_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002736_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002736_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002736_2025.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002736_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "002864.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002864_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210105",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002864_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002864_2023.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002864_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240313",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002864_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders002864_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260827",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 27,
+   "earliest": "20210105",
+   "latest": "20260827"
+  },
+  "300059.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300059_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300059_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300059_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300059_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300059_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300059_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300094.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300094_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300094_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 11
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300094_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300094_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300094_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300094_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300147.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300147_2021.json",
+     "exists": true,
+     "snapshots": 12,
+     "first": "20210219",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300147_2022.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300147_2023.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20230320",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300147_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300147_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300147_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 35,
+   "earliest": "20210219",
+   "latest": "20260630"
+  },
+  "300199.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300199_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300199_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300199_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300199_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240307",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300199_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300199_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300209.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300209_2021.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20210127",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300209_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300209_2023.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20230203",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300209_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300209_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300209_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 27,
+   "earliest": "20210127",
+   "latest": "20260630"
+  },
+  "300342.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300342_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300342_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300342_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300342_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300342_2025.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300342_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260225",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 26,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300368.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300368_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210108",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300368_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300368_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300368_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300368_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300368_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210108",
+   "latest": "20260630"
+  },
+  "300441.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300441_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210118",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300441_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300441_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300441_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240219",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300441_2025.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300441_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 27,
+   "earliest": "20210118",
+   "latest": "20260630"
+  },
+  "300489.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300489_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300489_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300489_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300489_2024.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20240123",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300489_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300489_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300565.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300565_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300565_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300565_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300565_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240125",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300565_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300565_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300798.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300798_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300798_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300798_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300798_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300798_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300798_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300921.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300921_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300921_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300921_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300921_2024.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300921_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300921_2026.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20260105",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 30,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "300946.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300946_2021.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20210126",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300946_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300946_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300946_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300946_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300946_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210126",
+   "latest": "20260630"
+  },
+  "300977.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300977_2021.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20210330",
+     "last": "20211231",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300977_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300977_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300977_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300977_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders300977_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210330",
+   "latest": "20260630"
+  },
+  "301010.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301010_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210528",
+     "last": "20211231",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301010_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301010_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301010_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301010_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301010_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260723",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210528",
+   "latest": "20260723"
+  },
+  "301231.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301231_2021.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301231_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220819",
+     "last": "20221231",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301231_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301231_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301231_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301231_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 20,
+   "earliest": "20220819",
+   "latest": "20260630"
+  },
+  "301297.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301297_2021.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301297_2022.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20221212",
+     "last": "20221231",
+     "ltgd_dates": 1,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301297_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301297_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301297_2025.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301297_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 21,
+   "earliest": "20221212",
+   "latest": "20260630"
+  },
+  "301353.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301353_2021.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301353_2022.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301353_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230517",
+     "last": "20231231",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301353_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240208",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301353_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301353_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 16,
+   "earliest": "20230517",
+   "latest": "20260630"
+  },
+  "301357.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301357_2021.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301357_2022.json",
+     "exists": true,
+     "snapshots": 1,
+     "first": "20221231",
+     "last": "20221231",
+     "ltgd_dates": 0,
+     "gd_rows_first_date": 3
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301357_2023.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20230328",
+     "last": "20231231",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301357_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301357_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301357_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 18,
+   "earliest": "20221231",
+   "latest": "20260630"
+  },
+  "301503.SZ": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301503_2021.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301503_2022.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301503_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230628",
+     "last": "20231231",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301503_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301503_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders301503_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 15,
+   "earliest": "20230628",
+   "latest": "20260630"
+  },
+  "600022.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600022_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600022_2022.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600022_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600022_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240205",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600022_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600022_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 29,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600113.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600113_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600113_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600113_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600113_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600113_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600113_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600196.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600196_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600196_2022.json",
+     "exists": true,
+     "snapshots": 8,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600196_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600196_2024.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20240326",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600196_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250122",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600196_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 30,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600269.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600269_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600269_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600269_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600269_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600269_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600269_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600377.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600377_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600377_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600377_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600377_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600377_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600377_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600459.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600459_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600459_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600459_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600459_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600459_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600459_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600567.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600567_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600567_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600567_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600567_2024.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600567_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600567_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 28,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600598.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600598_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600598_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600598_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600598_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600598_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600598_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600629.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600629_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600629_2022.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20220303",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600629_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600629_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600629_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600629_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600650.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600650_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600650_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600650_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600650_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600650_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600650_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600694.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600694_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210315",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600694_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600694_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600694_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600694_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600694_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210315",
+   "latest": "20260630"
+  },
+  "600826.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600826_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600826_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600826_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600826_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240207",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600826_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600826_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600846.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600846_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600846_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600846_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600846_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600846_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600846_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600928.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600928_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600928_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600928_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600928_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600928_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600928_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "600977.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600977_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600977_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600977_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600977_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600977_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders600977_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601098.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601098_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601098_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601098_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601098_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601098_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601098_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 22,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601111.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601111_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601111_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601111_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230116",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601111_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601111_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601111_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 26,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601298.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601298_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601298_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601298_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601298_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601298_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601298_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601328.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601328_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601328_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601328_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601328_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601328_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601328_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601366.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601366_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601366_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601366_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601366_2024.json",
+     "exists": true,
+     "snapshots": 8,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 8,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601366_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601366_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 26,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601869.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601869_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601869_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601869_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601869_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601869_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250328",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601869_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601900.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601900_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601900_2022.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20220317",
+     "last": "20221231",
+     "ltgd_dates": 6,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601900_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601900_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601900_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601900_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601963.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601963_2021.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20210204",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601963_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601963_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601963_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601963_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601963_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210204",
+   "latest": "20260630"
+  },
+  "601985.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601985_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601985_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601985_2023.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601985_2024.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20240201",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601985_2025.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20250110",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601985_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260828",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 29,
+   "earliest": "20210331",
+   "latest": "20260828"
+  },
+  "601988.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601988_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601988_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601988_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601988_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601988_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601988_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "601992.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601992_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601992_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601992_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601992_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601992_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders601992_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "603226.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603226_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603226_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603226_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603226_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603226_2025.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20250219",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603226_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "603258.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603258_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603258_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603258_2023.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603258_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603258_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603258_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 27,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "603333.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603333_2021.json",
+     "exists": true,
+     "snapshots": 7,
+     "first": "20210129",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603333_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603333_2023.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603333_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603333_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603333_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260821",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 29,
+   "earliest": "20210129",
+   "latest": "20260821"
+  },
+  "603536.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603536_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603536_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603536_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603536_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603536_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603536_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260320",
+     "last": "20260630",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "603618.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603618_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603618_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603618_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603618_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603618_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603618_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 23,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "603667.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603667_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603667_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603667_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603667_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603667_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603667_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "603686.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603686_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210107",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603686_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603686_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603686_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603686_2025.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603686_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210107",
+   "latest": "20260630"
+  },
+  "603823.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603823_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603823_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603823_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603823_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603823_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders603823_2026.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20260331",
+     "last": "20260806",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 1
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260806"
+  },
+  "605166.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders605166_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders605166_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders605166_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders605166_2024.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 6,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders605166_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders605166_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "688088.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688088_2021.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20210319",
+     "last": "20211231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688088_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688088_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688088_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240202",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688088_2025.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688088_2026.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20260331",
+     "last": "20260731",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 26,
+   "earliest": "20210319",
+   "latest": "20260731"
+  },
+  "688116.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688116_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688116_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688116_2023.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20230113",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688116_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688116_2025.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20250110",
+     "last": "20251231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688116_2026.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20260106",
+     "last": "20260720",
+     "ltgd_dates": 3,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 29,
+   "earliest": "20210331",
+   "latest": "20260720"
+  },
+  "688218.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688218_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688218_2022.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688218_2023.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20230202",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688218_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688218_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688218_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 25,
+   "earliest": "20210331",
+   "latest": "20260630"
+  },
+  "688498.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688498_2021.json",
+     "exists": true,
+     "parse": "empty_or_unparseable"
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688498_2022.json",
+     "exists": true,
+     "snapshots": 3,
+     "first": "20221202",
+     "last": "20221231",
+     "ltgd_dates": 1,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688498_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688498_2024.json",
+     "exists": true,
+     "snapshots": 5,
+     "first": "20240207",
+     "last": "20241231",
+     "ltgd_dates": 5,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688498_2025.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688498_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 18,
+   "earliest": "20221202",
+   "latest": "20260630"
+  },
+  "688521.SH": {
+   "years": {
+    "2021": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2021]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688521_2021.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20210331",
+     "last": "20211231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2022": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2022]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688521_2022.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20220331",
+     "last": "20221231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2023": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2023]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688521_2023.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20230331",
+     "last": "20231231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2024": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2024]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688521_2024.json",
+     "exists": true,
+     "snapshots": 4,
+     "first": "20240331",
+     "last": "20241231",
+     "ltgd_dates": 4,
+     "gd_rows_first_date": 10
+    },
+    "2025": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2025]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688521_2025.json",
+     "exists": true,
+     "snapshots": 6,
+     "first": "20250331",
+     "last": "20251231",
+     "ltgd_dates": 6,
+     "gd_rows_first_date": 10
+    },
+    "2026": {
+     "msg": "{\"ErrorId\":\"0\",\"Msg\":\"下载十大股东数据文件[2026]成功。\",\"run_id\":\"10\"}\n",
+     "file": "holders688521_2026.json",
+     "exists": true,
+     "snapshots": 2,
+     "first": "20260331",
+     "last": "20260630",
+     "ltgd_dates": 2,
+     "gd_rows_first_date": 10
+    }
+   },
+   "errors": [],
+   "years_with_data": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "total_snapshots": 24,
+   "earliest": "20210331",
+   "latest": "20260630"
+  }
+ },
+ "summary": {
+  "stocks_total": 84,
+  "stocks_with_any_holders": 84,
+  "download_calls": 504,
+  "files_parsed": 496,
+  "download_errors": 0,
+  "total_snapshot_dates": 2035
+ },
+ "universe_size": 84,
+ "status": "success"
+}

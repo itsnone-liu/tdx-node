@@ -27,11 +27,12 @@
     },
     {
       "dataset": "Stock share-capital history",
-      "status": "available_with_caution",
+      "status": "verified_on_csr84",
       "access": ["tq.get_gb_info_by_date"],
-      "coverage": "600519 sample returned 1250 trading-day rows and 3 distinct total-share values",
-      "time_semantics": "daily-expanded values over requested interval",
-      "backtest_grade": "usable for equities after validation; record retrieval date and test change dates"
+      "coverage": "CSR-84 universe 2021-2026: 84/84 ok, 703 change points, 112 major (>=1%) total-share changes across 64 stocks; series start 2021-08-02 (=frozen window), 6 late IPOs covered from listing",
+      "time_semantics": "change date = EFFECTIVE/completion date (listing date, cancellation completion, ex-date), NOT announcement date; verified externally 000750.SZ 2023-11-17 placement listing and 000078.SZ 2024-08-20 buyback-cancellation completion, plus 26/27 bonus/allotment events within 2% of theoretical share ratio",
+      "backtest_grade": "market_cap(T)=price(T)*share_capital(T) valid at effective-date semantics; PIT announcement chain must come from an announcement index",
+      "evidence": "manifests/capital_history_csr84.json"
     },
     {
       "dataset": "ETF historical outstanding shares / scale (GP52)",
@@ -83,12 +84,21 @@
       "backtest_grade": "no historical reconstruction; verify exact 56/57 labels before use"
     },
     {
-      "dataset": "Top-ten holders",
-      "status": "available",
+      "dataset": "Top-ten holders (gd + ltgd)",
+      "status": "content_ok_pit_pending_csr84",
       "access": ["tq.download_file down_type=1"],
-      "coverage": "600519 year 2025 file returned 7 dated disclosures",
-      "time_semantics": "dated snapshots inside annual file; announcement/retrieval dates must be preserved separately",
-      "backtest_grade": "usable only with point-in-time lag discipline"
+      "coverage": "600519 year 2025 file returned 7 dated disclosures; CSR-84 batch 2021-2026 coverage in manifests/holders_coverage_csr84.json",
+      "time_semantics": "snapshot/position dates inside annual files; publication and availability dates NOT proven — join with an official announcement index before any PIT use",
+      "backtest_grade": "content source only; never a PIT source by itself",
+      "evidence": "manifests/holders_coverage_csr84.json"
+    },
+    {
+      "dataset": "Forward-PIT daily archive",
+      "status": "active_archivist",
+      "access": ["archivist/daily_archive.py via scheduled task tdx-archivist (daily 20:30)"],
+      "coverage": "ETF list(31), CSI300(23), margin cats 56/57, ETF watchlist PCF, CSR-84 same-day share snapshot, watchlist LHB/unlock, weekly holders; each artifact sha256+retrieved_at in archive/<date>/manifest.json",
+      "time_semantics": "prospectively point-in-time from archive start date",
+      "backtest_grade": "the only growing PIT asset on this node; history before archive start is NOT covered"
     },
     {
       "dataset": "Limit-up/down and ex-day snapshots",
@@ -141,6 +151,9 @@
     "D:\\tdx-node\\manifests\\gp52_permission_finding.json",
     "D:\\tdx-node\\manifests\\etf_gb_lookahead_audit.json",
     "D:\\tdx-node\\manifests\\downloaded_files_audit.json",
+    "D:\\tdx-node\\manifests\\csr84_universe.json",
+    "D:\\tdx-node\\manifests\\capital_history_csr84.json",
+    "D:\\tdx-node\\manifests\\holders_coverage_csr84.json",
     "D:\\tdx-node\\raw\\raw_pro_gp51_gp52.json",
     "D:\\tdx-node\\raw\\http_17709_probe.json",
     "D:\\tdx-node\\raw\\http_17709_gp52_table_list.json",
