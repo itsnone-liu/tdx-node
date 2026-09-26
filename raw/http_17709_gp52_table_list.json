@@ -1,0 +1,34 @@
+{
+  "request": {
+    "id": 3,
+    "method": "get_gpjy_value",
+    "params": {
+      "stock_list": [
+        "510300.SH",
+        "159919.SZ"
+      ],
+      "table_list": [
+        "GP52"
+      ],
+      "start_time": "20250101",
+      "end_time": "20260924"
+    }
+  },
+  "status_code": 200,
+  "text": "{\"id\":3,\"result\":{\"ErrorId\":\"0\",\"ProDataPaged\":true,\"Value\":{\"159919.SZ\":null,\"510300.SH\":null},\"stock_page_index\":0,\"stock_page_size\":100,\"stock_total\":2,\"stock_total_pages\":1}}\n",
+  "json": {
+    "id": 3,
+    "result": {
+      "ErrorId": "0",
+      "ProDataPaged": true,
+      "Value": {
+        "159919.SZ": null,
+        "510300.SH": null
+      },
+      "stock_page_index": 0,
+      "stock_page_size": 100,
+      "stock_total": 2,
+      "stock_total_pages": 1
+    }
+  }
+}

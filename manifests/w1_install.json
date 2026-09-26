@@ -1,0 +1,11 @@
+﻿{
+    "captured_at":  "2026-09-26T09:59:19.8802349+08:00",
+    "install_root":  "D:\\tdx-node\\tdx-tq-v773",
+    "files":  1193,
+    "bytes":  454842559,
+    "tdxw_sha256":  "4C822464613FABE4B4235EDF171B031D8B209EF68BD7D06DEA403E1CD54C1FAD",
+    "tqcenter_user_sha256":  "241358919FD394751A46BB51D64374EB0216F7C22BFA47BC13C48418BA26B1B0",
+    "tqcenter_version":  "Version: 1.1.0",
+    "old_tdxw_sha256":  "F5F2E6025A4D80BB1AFBCB2A51C753D3C1909E09AA9D1BC8F7C3B701B081F74C",
+    "old_unchanged":  true
+}

@@ -1,0 +1,26 @@
+{
+  "510300.SH": {
+    "rows": 1250,
+    "unique_zgb": 1,
+    "unique_ltgb": 1,
+    "first_date": 20210802,
+    "last_date": 20260924,
+    "value": 23904487424.0
+  },
+  "510050.SH": {
+    "rows": 1250,
+    "unique_zgb": 1,
+    "unique_ltgb": 1,
+    "first_date": 20210802,
+    "last_date": 20260924,
+    "value": 7167366656.0
+  },
+  "159919.SZ": {
+    "rows": 1250,
+    "unique_zgb": 1,
+    "unique_ltgb": 1,
+    "first_date": 20210802,
+    "last_date": 20260924,
+    "value": 6566617088.0
+  }
+}

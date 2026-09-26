@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-09-26T10:26:00+08:00",
+  "client": "TongdaXin Financial Terminal V7.73 64-bit",
+  "account_tier_observation": "Opening command 9264 (System -> Professional Financial Data) displayed: 专业财务数据需要购买普及版或以上版本",
+  "gp52_raw_result": {
+    "error_id": "0",
+    "codes": ["510300.SH", "510050.SH", "159919.SZ"],
+    "fields": ["GP51", "GP52"],
+    "values": null
+  },
+  "controls": {
+    "vipdoc_copied_and_byte_verified": true,
+    "refresh_cache_force_success": true,
+    "tqcenter_initialized": true,
+    "localhost_17709_listening": true
+  },
+  "finding": "GP51/GP52 require the client professional stock-data package. The current free account cannot download that package; ETF historical shares are unavailable through local free TQ for this account."
+}

@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-09-26T02:20:26.869220+00:00",
+  "request": {
+    "codes": [
+      "688318.SH"
+    ],
+    "fields": [
+      "GP3",
+      "GP03"
+    ],
+    "start": "20250101",
+    "end": "20250102",
+    "output": "D:\\tdx-node\\raw\\raw_pro_gp3_gp03.json"
+  },
+  "status": "success",
+  "run_id": 3,
+  "wire_request": {
+    "id": 3,
+    "type": 3,
+    "stock_list": [
+      "688318.SH"
+    ],
+    "table_list": [
+      "GP3",
+      "GP03"
+    ],
+    "start_time": "20250101000000",
+    "end_time": "20250102000000",
+    "stock_page_index": 0
+  },
+  "raw_response": "{\"ErrorId\":\"0\",\"ProDataPaged\":true,\"Value\":{\"688318.SH\":null},\"stock_page_index\":0,\"stock_page_size\":100,\"stock_total\":1,\"stock_total_pages\":1}\n",
+  "parsed_response": {
+    "ErrorId": "0",
+    "ProDataPaged": true,
+    "Value": {
+      "688318.SH": null
+    },
+    "stock_page_index": 0,
+    "stock_page_size": 100,
+    "stock_total": 1,
+    "stock_total_pages": 1
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "captured_at": "2026-09-26T10:42:00+08:00",
+  "node": {
+    "original_root": "D:\\new_tdx",
+    "isolated_tq_root": "D:\\tdx-node\\tdx-tq-v773",
+    "client": "TongdaXin Financial Terminal V7.73 64-bit",
+    "tqcenter_version": "1.1.0",
+    "localhost": "http://127.0.0.1:17709/",
+    "original_tdxw_sha256_unchanged": true
+  },
+  "capabilities": [
+    {
+      "dataset": "A-share/BJ daily OHLCV",
+      "status": "available",
+      "access": ["vipdoc .day", "tqcenter get_market_data", "HTTP 17709 get_market_data"],
+      "coverage": "SH 4879 files, SZ 4369, BJ 350; representative series 2021-08-02 through 2026-09-24/25",
+      "time_semantics": "historical trading-day series",
+      "backtest_grade": "yes, after corporate-action policy is explicit"
+    },
+    {
+      "dataset": "Dividend/corporate-action events",
+      "status": "available",
+      "access": ["tq.get_divid_factors"],
+      "coverage": "600519 sample returned 10 events for 2021-2026",
+      "time_semantics": "event/effective-date series; announcement date is not included",
+      "backtest_grade": "usable for price adjustment; not sufficient alone for announcement-time simulations"
+    },
+    {
+      "dataset": "Stock share-capital history",
+      "status": "available_with_caution",
+      "access": ["tq.get_gb_info_by_date"],
+      "coverage": "600519 sample returned 1250 trading-day rows and 3 distinct total-share values",
+      "time_semantics": "daily-expanded values over requested interval",
+      "backtest_grade": "usable for equities after validation; record retrieval date and test change dates"
+    },
+    {
+      "dataset": "ETF historical outstanding shares / scale (GP52)",
+      "status": "unavailable_current_account",
+      "access": ["tq.get_gpjy_value", "HTTP 17709 get_gpjy_value"],
+      "coverage": "510300, 510050, 159919 returned ErrorId=0 with null values",
+      "permission": "client says 专业财务数据需要购买普及版或以上版本",
+      "units_when_entitled": "fund shares: 10,000 units; fund scale: CNY 10,000",
+      "backtest_grade": "no"
+    },
+    {
+      "dataset": "ETF shares via get_gb_info_by_date",
+      "status": "unsafe_false_history",
+      "access": ["tq.get_gb_info_by_date"],
+      "coverage": "1250 rows for each tested ETF but exactly one unique Zgb/Ltgb value per ETF",
+      "time_semantics": "current snapshot repeated across all historical dates",
+      "backtest_grade": "prohibited: severe look-ahead bias"
+    },
+    {
+      "dataset": "ETF PCF subscription/redemption summary",
+      "status": "available",
+      "access": ["tq.download_file down_type=2"],
+      "coverage": "510300 and 159919 sample date 2026-09-24 downloaded successfully",
+      "time_semantics": "date-specific PCF summary; files contain summary header, not constituent detail and not historical shares",
+      "backtest_grade": "limited; archive daily prospectively"
+    },
+    {
+      "dataset": "ETF list and index-to-ETF mapping",
+      "status": "available_current_snapshot",
+      "access": ["tq.get_stock_list market=31", "tq.get_trackzs_etf_info"],
+      "coverage": "1729 ETF codes; 000300.SH mapped to 30 ETFs",
+      "time_semantics": "current snapshot",
+      "backtest_grade": "not survivorship-safe without dated archives"
+    },
+    {
+      "dataset": "Financing/securities-lending balances (GP03/11/12/13)",
+      "status": "unavailable_current_account",
+      "access": ["tq.get_gpjy_value"],
+      "coverage": "official GP3 sample returned null locally",
+      "permission": "same professional stock-data package gate as GP52",
+      "backtest_grade": "no"
+    },
+    {
+      "dataset": "Financing/securities-lending eligible universe",
+      "status": "current_snapshot_only_unresolved_labels",
+      "access": ["tq.get_stock_list"],
+      "coverage": "new category codes 56 and 57 returned 3979 and 4460 instruments; exact labels not exposed by API",
+      "time_semantics": "current classification only",
+      "backtest_grade": "no historical reconstruction; verify exact 56/57 labels before use"
+    },
+    {
+      "dataset": "Top-ten holders",
+      "status": "available",
+      "access": ["tq.download_file down_type=1"],
+      "coverage": "600519 year 2025 file returned 7 dated disclosures",
+      "time_semantics": "dated snapshots inside annual file; announcement/retrieval dates must be preserved separately",
+      "backtest_grade": "usable only with point-in-time lag discipline"
+    },
+    {
+      "dataset": "Limit-up/down and ex-day snapshots",
+      "status": "api_present_not_full_history_verified",
+      "access": ["tq.get_zdt_data", "tq.get_exday_data"],
+      "time_semantics": "specialized current/date data; not established as a complete historical archive",
+      "backtest_grade": "not approved by this probe"
+    },
+    {
+      "dataset": "Dragon-Tiger List",
+      "status": "available_recent_download",
+      "access": ["tq.download_file down_type=6"],
+      "coverage": "download succeeded; 688318 sample file was empty because no recent matching record",
+      "time_semantics": "recent-file download, not proved complete history",
+      "backtest_grade": "not approved for full-history research without independent archive"
+    },
+    {
+      "dataset": "Restricted-share unlocks",
+      "status": "available_file",
+      "access": ["tq.download_file down_type=7"],
+      "coverage": "688318 returned one implemented event dated 2023-04-27",
+      "time_semantics": "event file; retrieval and announcement dates are not explicit",
+      "backtest_grade": "use cautiously with external point-in-time verification"
+    },
+    {
+      "dataset": "Local HTTP transport",
+      "status": "available",
+      "access": ["POST http://127.0.0.1:17709/ with {id, method, params}"],
+      "coverage": "get_market_data returned five 600519 rows matching local history",
+      "notes": "not standard JSON-RPC/MCP handshake; get_gpjy_value HTTP wrapper requires table_list rather than documented field_list"
+    },
+    {
+      "dataset": "GUI automation",
+      "status": "control_plane_fallback",
+      "access": ["Win32 menu command IDs", "window-title readiness", "port 17709 readiness"],
+      "coverage": "command 9279 opens post-market data; command 9264 opens professional-data gate",
+      "notes": "do not use GUI scraping as data plane; embedded Chromium pages expose little UIA structure"
+    }
+  ],
+  "red_lines": [
+    "Never substitute ETF get_gb_info_by_date output for GP52 historical shares.",
+    "Never treat a current constituent/eligible list as a historical universe.",
+    "Never equate ETF PCF with ETF outstanding-share history.",
+    "Preserve announcement, effective, event and retrieval dates separately.",
+    "Do not read or copy saved TDX credentials; rely only on client auto-login state."
+  ],
+  "evidence": [
+    "D:\\tdx-node\\manifests\\w0_baseline_20260926.json",
+    "D:\\tdx-node\\manifests\\w1_install.json",
+    "D:\\tdx-node\\manifests\\gp52_permission_finding.json",
+    "D:\\tdx-node\\manifests\\etf_gb_lookahead_audit.json",
+    "D:\\tdx-node\\manifests\\downloaded_files_audit.json",
+    "D:\\tdx-node\\raw\\raw_pro_gp51_gp52.json",
+    "D:\\tdx-node\\raw\\http_17709_probe.json",
+    "D:\\tdx-node\\raw\\http_17709_gp52_table_list.json",
+    "D:\\tdx-node\\raw\\tq_free_capabilities.json",
+    "D:\\tdx-node\\raw\\tq_etf_gb_history.json",
+    "D:\\tdx-node\\raw\\tq_market_categories_54_90.json"
+  ]
+}

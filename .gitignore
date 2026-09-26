@@ -1,0 +1,51 @@
+# Installed TongdaXin client and all mutable user/login/cache state
+/tdx-tq-v773/
+
+# Vendor installer and binaries
+/installers/
+*.exe
+*.dll
+*.sys
+*.pdb
+
+# Runtime-generated logs and screenshots
+/logs/
+*.log
+*.png
+*.jpg
+*.jpeg
+
+# Local downloaded datasets and large copied market data
+/data/
+/vipdoc/
+*.day
+*.lc1
+*.lc5
+*.tnf
+*.th2
+
+# Credentials and local configuration
+*.key
+*.pem
+*.pfx
+*.cer
+*.cookie
+*.cookies
+.env
+.env.*
+*credential*
+*password*
+*secret*
+*token*
+
+# Python build/cache
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Machine-specific inventory and local tool state
+/manifests/pre_install_root_dirs.json
+.jspace/
+.DS_Store
+Thumbs.db

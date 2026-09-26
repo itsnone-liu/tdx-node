@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-09-26T09:37:43+08:00",
+  "tdx_root": "D:\\new_tdx",
+  "tdxw": {
+    "length": 14350256,
+    "last_write": "2025-12-28T13:56:55+08:00",
+    "sha256": "F5F2E6025A4D80BB1AFBCB2A51C753D3C1909E09AA9D1BC8F7C3B701B081F74C",
+    "file_version": "1, 0, 0, 1"
+  },
+  "processes": [],
+  "port_17709": [],
+  "pyplugins_exists": false,
+  "tqcenter": [],
+  "markets": {
+    "sh": {"count": 4879, "total_bytes": 166269664, "newest_write": "2026-09-25T23:44:17+08:00"},
+    "sz": {"count": 4369, "total_bytes": 145897600, "newest_write": "2026-09-25T23:42:14+08:00"},
+    "bj": {"count": 350, "total_bytes": 8435328, "newest_write": "2026-09-25T23:44:17+08:00"}
+  },
+  "finding": "W0 passed: vipdoc daily files are readable and current. TQ is not present in the existing installation."
+}

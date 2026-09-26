@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-09-26T02:06:57.786802+00:00",
+  "script": "D:\\tdx-node\\tdx-tq-v773\\PYPlugins\\user\\tdx_probe_gp52.py",
+  "python": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]",
+  "request": {
+    "codes": [
+      "510300.SH",
+      "510050.SH",
+      "159919.SZ"
+    ],
+    "fields": [
+      "GP51",
+      "GP52"
+    ],
+    "start": "20260901",
+    "end": "20260924"
+  },
+  "initialize": "ok",
+  "response": {
+    "159919.SZ": null,
+    "510050.SH": null,
+    "510300.SH": null
+  },
+  "status": "success"
+}

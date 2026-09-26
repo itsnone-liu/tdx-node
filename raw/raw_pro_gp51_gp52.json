@@ -1,0 +1,49 @@
+{
+  "captured_at": "2026-09-26T02:20:35.285562+00:00",
+  "request": {
+    "codes": [
+      "510300.SH",
+      "510050.SH",
+      "159919.SZ"
+    ],
+    "fields": [
+      "GP51",
+      "GP52"
+    ],
+    "start": "20250101",
+    "end": "20260924",
+    "output": "D:\\tdx-node\\raw\\raw_pro_gp51_gp52.json"
+  },
+  "status": "success",
+  "run_id": 3,
+  "wire_request": {
+    "id": 3,
+    "type": 3,
+    "stock_list": [
+      "510300.SH",
+      "510050.SH",
+      "159919.SZ"
+    ],
+    "table_list": [
+      "GP51",
+      "GP52"
+    ],
+    "start_time": "20250101000000",
+    "end_time": "20260924000000",
+    "stock_page_index": 0
+  },
+  "raw_response": "{\"ErrorId\":\"0\",\"ProDataPaged\":true,\"Value\":{\"159919.SZ\":null,\"510050.SH\":null,\"510300.SH\":null},\"stock_page_index\":0,\"stock_page_size\":100,\"stock_total\":3,\"stock_total_pages\":1}\n",
+  "parsed_response": {
+    "ErrorId": "0",
+    "ProDataPaged": true,
+    "Value": {
+      "159919.SZ": null,
+      "510050.SH": null,
+      "510300.SH": null
+    },
+    "stock_page_index": 0,
+    "stock_page_size": 100,
+    "stock_total": 3,
+    "stock_total_pages": 1
+  }
+}
