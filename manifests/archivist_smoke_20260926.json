@@ -1,25 +1,39 @@
 {
  "date": "20260926",
- "archivist_version": "1.1.0",
+ "archivist_version": "1.2.0",
  "status": "COMPLETE",
- "expected": 221,
- "successful": 221,
+ "contract_met": true,
+ "day_type": "holders",
+ "expected_contract": 137,
+ "expected": 137,
+ "successful": 137,
  "success_nonempty": 130,
- "success_empty": 91,
+ "success_empty": 7,
  "failed": 0,
  "sha_verified": 130,
  "sha_failures": 0,
- "note": "smoke summary of the git-ignored archive day directory; full manifest lives in archive/20260926/manifest.json on the node",
+ "files_declared": 130,
+ "files_present": 130,
+ "orphan_files": 0,
+ "missing_files": 0,
+ "universe": {
+  "size": 84,
+  "sha256": "25c4fac23ee34b20ff07377cfab6558536a5202becbdbbe557bd8fe08c8bdafc",
+  "baseline_commit": "1cabde8"
+ },
+ "full_manifest_sha256": "30aa171318032cb490a9ce98462bd45d7a24e045bef0d569e6c123bdf2154971",
+ "note": "smoke summary cryptographically bound to archive/20260926/manifest.json (git-ignored on the node) via full_manifest_sha256",
  "scheduled_task": {
   "name": "tdx-archivist",
   "time": "20:30",
-  "enabled": true,
+  "logon_mode": "Interactive only (/IT)",
   "re registrable via": "automation/register_archivist.ps1"
  },
- "audit_fix_applied": [
-  "request strings mirror actual calls (list_type=1)",
-  "COMPLETE/PARTIAL/FAILED ladder with frozen completeness counters",
-  "SUCCESS_NONEMPTY / SUCCESS_EMPTY / FAILED separation (bugs found and fixed: pcf etfpcf prefix KeyError, holders <code>_<year> source name)",
-  "sha256 re-verification pass at end of run"
+ "audit_fix2_applied": [
+  "universe hard-frozen at 84 (baseline 1cabde8) with sha256; damage is fatal FAILED, never silent shrink (negative-tested)",
+  "gb_today_watchlist = ONE grouped request, internal tally sums to universe_size (option B)",
+  "expected contract frozen and asserted: regular=53 / holders=137; mismatch = FAILED",
+  "directory invariant: files_declared==files_present, orphan=0, missing=0, else PARTIAL; --force clears day dir first",
+  "register script uses /IT; smoke bound to full manifest sha256"
  ]
 }

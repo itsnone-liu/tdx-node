@@ -47,3 +47,9 @@ Corrections, insights, and knowledge gaps captured during development.
 - Provenance strings in manifests must be generated from the actual call, not hand-written beside it — v1.0 recorded `list_type=2` while calling with `list_type=1` after a bugfix; the metadata silently diverged (caught by external audit).
 - A bare `status: complete` is meaningless for PIT archives: classify every fetch as SUCCESS_NONEMPTY / SUCCESS_EMPTY / FAILED (no-record ≠ fetch-failure) and gate a COMPLETE day on zero failures plus SHA re-verification.
 - Client file-name prefixes differ per download kind (`etfpcf<code>_<date>`, `lhb<code>`, `lockshare<code>`, `holders<code>_<year>`); centralize them in one helper or misclassification follows.
+
+## [LRN-20260926-007] frozen completeness contracts
+
+- **Category**: best_practice
+- A completeness counter derived from whatever loaded is not a contract: `try: codes = load() except: codes = []` lets a corrupt input silently shrink `expected` and still report COMPLETE. Freeze the expected cardinality independently (universe size + request formula) and hard-fail on any deviation — damage must be FAILED, never a smaller-but-green day.
+- Grouped requests (N sub-fetches → 1 artifact) must keep request cardinality == completeness cardinality: either log every sub-request or count the group once with an internal tally that must sum to the group size.

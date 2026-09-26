@@ -5,6 +5,6 @@ $repoRoot = 'D:\tdx-node'
 $task = 'tdx-archivist'
 $wrapper = Join-Path $repoRoot 'archivist\run_daily.ps1'
 if (-not (Test-Path $wrapper)) { Write-Error "wrapper missing: $wrapper"; exit 1 }
-schtasks /Create /TN $task /TR "powershell -NoProfile -ExecutionPolicy Bypass -File $wrapper" /SC DAILY /ST 20:30 /F
+schtasks /Create /TN $task /TR "powershell -NoProfile -ExecutionPolicy Bypass -File $wrapper" /SC DAILY /ST 20:30 /IT /F
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 schtasks /Query /TN $task /FO LIST

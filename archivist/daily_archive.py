@@ -1,32 +1,32 @@
-﻿#!/usr/bin/env python3
-"""Task 3: TDX daily archivist 鈥?forward-PIT snapshot archive (free-account sources only).
+#!/usr/bin/env python3
+"""Task 3: TDX daily archivist — forward-PIT snapshot archive (free-account sources only).
 
-ARCHIVIST-AUDIT-FIX (2026-09-26, per external audit 9161eb3):
-  1. manifest 'request' strings now mirror the ACTUAL calls (list_type=1).
-  2. three-level day status COMPLETE / PARTIAL / FAILED with a frozen
-     completeness block: expected_requests, successful_requests,
-     success_nonempty, success_empty, failed_requests, sha_verified.
-     COMPLETE requires failed_requests == 0 across all mandatory groups.
-  3. every per-stock fetch is classified SUCCESS_NONEMPTY / SUCCESS_EMPTY /
-     FAILED 鈥?"no record today" is never conflated with "fetch failed".
-  4. sha256 recorded at write time and re-verified by re-reading at end;
-     any mismatch downgrades the day to PARTIAL.
+AUDIT-FIX2 (2026-09-26, second external audit of 1576e02) — freezes the
+completeness contract so COMPLETE means "everything the day owed us":
+  1. universe is HARD-FROZEN at 84 codes (baseline 1cabde8). A missing,
+     corrupt or renamed csr84_universe.json is a fatal FAILED — the expected
+     request set can never silently shrink. universe_sha256 is recorded.
+  2. gb_today_watchlist is ONE grouped mandatory request (audit option B):
+     its internal n_nonempty/n_empty/n_failed tally must sum to
+     universe_size. Request cardinality == completeness cardinality.
+  3. expected contract is frozen and asserted:
+       regular day  = 4 markets + 8 PCF + 1 gb group + 20 LHB + 20 unlock = 53
+       holders day  = 53 + 84 holders = 137  (Monday, or --force)
+     a mismatch is a fatal FAILED (code bug, not data condition).
+  4. directory invariant: actual files == manifest-declared files
+     (orphan_files == 0 and missing_files == 0), else the day is PARTIAL.
+     --force first clears the day directory so reruns cannot leak orphans.
+  5. day status COMPLETE / PARTIAL / FAILED with frozen counters
+     (expected/successful/nonempty/empty/failed/sha_verified/sha_failures,
+      files_declared/present/orphan/missing) and per-request outcomes
+     SUCCESS_NONEMPTY / SUCCESS_EMPTY / FAILED.
 
-Every trading evening this captures the things that are "current snapshot only"
-in the free TDX node, so they become OUR point-in-time history from now on:
-  - ETF current list (market 31), CSI300 constituents (market 23),
-    margin categories 56/57 (labels unresolved 鈥?archived raw)
-  - ETF PCF for the ETF watchlist (download_file type 2)
-  - today's share-capital snapshot for the stock watchlist (single date query)
-  - LHB (type 6) / unlock (type 7) recent files for the stock watchlist
-  - top-10 holders (type 1) for current year, weekly (Mondows) to stay light
-
-Each artifact lands in D:\\tdx-node\\archive\\<YYYYMMDD>\\ with a manifest entry:
-retrieved_at, request, file, sha256, bytes, outcome. Idempotent per day
-(--force to redo).
+Sources captured (free account only): ETF list (31), CSI300 (23), margin
+categories 56/57, ETF watchlist PCF (type 2), CSR-84 same-day share snapshot,
+watchlist LHB (6) / unlock (7), weekly holders (1).
 
 Red lines honored: ETF get_gb_info_by_date is NEVER used (false history);
-no credentials are read 鈥?the client's own auto-login is the only auth.
+no credentials are read — the client's own auto-login is the only auth.
 """
 from __future__ import annotations
 import argparse
@@ -49,6 +49,10 @@ TDX_EXE = CLIENT_DIR / 'TdxW.exe'
 ARCHIVE_ROOT = NODE_ROOT / 'archive'
 UNIVERSE_FILE = NODE_ROOT / 'manifests' / 'csr84_universe.json'
 
+UNIVERSE_FROZEN_SIZE = 84
+UNIVERSE_BASELINE_COMMIT = '1cabde8'
+LHB_UNLOCK_WINDOW = 20
+
 sys.path.insert(0, str(USER_DIR))
 from tqcenter import tq  # noqa: E402
 
@@ -58,8 +62,9 @@ ETF_WATCHLIST = [
 ]
 MARKET_SNAPSHOTS = {'31': 'etf_list', '23': 'csi300', '56': 'margin_cat56', '57': 'margin_cat57'}
 
-# file-name prefixes used by the client for download_file outputs
 FILE_PREFIX = {'lhb': 'lhb', 'unlock': 'lockshare'}
+
+NONEMPTY, EMPTY, FAILED = 'SUCCESS_NONEMPTY', 'SUCCESS_EMPTY', 'FAILED'
 
 
 def src_name(kind: str, num: str, down_time: str) -> str:
@@ -70,8 +75,6 @@ def src_name(kind: str, num: str, down_time: str) -> str:
         return f'holders{num}_{down_time[:4]}.json'
     return f'{FILE_PREFIX[kind]}{num}.json'
 
-NONEMPTY, EMPTY, FAILED = 'SUCCESS_NONEMPTY', 'SUCCESS_EMPTY', 'FAILED'
-
 
 class Counters:
     def __init__(self):
@@ -81,6 +84,10 @@ class Counters:
         self.failed = 0
         self.sha_verified = 0
         self.sha_failures = 0
+        self.files_declared = 0
+        self.files_present = 0
+        self.orphan_files = 0
+        self.missing_files = 0
 
     def count(self, outcome):
         self.expected += 1
@@ -100,6 +107,10 @@ class Counters:
             'failed_requests': self.failed,
             'sha_verified': self.sha_verified,
             'sha_failures': self.sha_failures,
+            'files_declared': self.files_declared,
+            'files_present': self.files_present,
+            'orphan_files': self.orphan_files,
+            'missing_files': self.missing_files,
         }
 
 
@@ -129,7 +140,6 @@ def pid_of_listener() -> int | None:
 
 
 def ensure_client(max_wait_s: int = 240) -> int | None:
-    """Return TdxW pid if the local HTTP plane is up; start the client if needed."""
     if port_open(17709):
         return pid_of_listener()
     if not TDX_EXE.exists():
@@ -139,7 +149,7 @@ def ensure_client(max_wait_s: int = 240) -> int | None:
     deadline = time.time() + max_wait_s
     while time.time() < deadline:
         if port_open(17709):
-            time.sleep(5)  # settle: login + data ready
+            time.sleep(5)
             return pid_of_listener()
         time.sleep(5)
     return None
@@ -208,6 +218,32 @@ def verify_shas(manifest: list, ctr: Counters, day_dir: Path):
             a['sha_recheck'] = 'MISMATCH_OR_UNREADABLE'
 
 
+def enforce_file_invariant(manifest: list, ctr: Counters, day_dir: Path):
+    """actual files must equal manifest-declared files (manifest.json aside)."""
+    declared = {a['file'] for a in manifest if a.get('file')}
+    actual = {p.name for p in day_dir.iterdir() if p.is_file()} - {'manifest.json'}
+    ctr.files_declared = len(declared)
+    ctr.files_present = len(actual & declared)
+    ctr.orphan_files = len(actual - declared)
+    ctr.missing_files = len(declared - actual)
+
+
+def load_frozen_universe() -> tuple[list[str], str]:
+    """Universe is a frozen contract: any damage is fatal, never a shrink."""
+    try:
+        raw = UNIVERSE_FILE.read_bytes()
+        codes = json.loads(raw.decode('utf-8'))['codes']
+    except Exception as exc:
+        raise RuntimeError(f'universe file unreadable ({UNIVERSE_FILE}): {exc!r} — '
+                           f'refusing to shrink expected request set') from exc
+    if len(codes) != UNIVERSE_FROZEN_SIZE:
+        raise RuntimeError(f'universe size {len(codes)} != frozen {UNIVERSE_FROZEN_SIZE} '
+                           f'(baseline {UNIVERSE_BASELINE_COMMIT})')
+    if len(set(codes)) != len(codes):
+        raise RuntimeError('universe contains duplicate codes')
+    return codes, hashlib.sha256(raw).hexdigest()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument('--force', action='store_true')
@@ -227,93 +263,118 @@ def main() -> int:
         except Exception:
             pass
 
+    # --force owns the day directory: clear stale artifacts so reruns cannot leak orphans
+    if args.force:
+        for p in day_dir.iterdir():
+            if p.is_file() and p.name != 'manifest.json':
+                p.unlink()
+
     ctr = Counters()
     manifest = []
-    meta = {
-        'node': 'tdx-node free account',
-        'archivist_version': '1.1.0',
-        'tqcenter_version': tqcenter_version(),
-        'client_pid': None,
-        'http_plane': '127.0.0.1:17709',
-        'status_ladder': 'COMPLETE(all mandatory fetches ok) / PARTIAL(some failed) / FAILED(fatal)',
-        'red_lines': [
-            'ETF get_gb_info_by_date never used (false history, unique_zgb=1)',
-            'GP52/GP03-series gated by paid package 鈥?not fetched',
-        ],
-    }
-
-    pid = ensure_client()
-    meta['client_pid'] = pid
     fatal = None
     tq_up = False
+    meta = {}
+    day_type = ('holders' if (datetime.strptime(args.date, '%Y%m%d').weekday() == 0 or args.force)
+                else 'regular')
 
     try:
+        codes, universe_sha = load_frozen_universe()
+        expected_contract = (len(MARKET_SNAPSHOTS) + len(ETF_WATCHLIST) + 1
+                             + 2 * min(LHB_UNLOCK_WINDOW, len(codes))
+                             + (len(codes) if day_type == 'holders' else 0))
+        meta = {
+            'node': 'tdx-node free account',
+            'archivist_version': '1.2.0',
+            'tqcenter_version': tqcenter_version(),
+            'client_pid': None,
+            'http_plane': '127.0.0.1:17709',
+            'day_type': day_type,
+            'universe_size': len(codes),
+            'universe_sha256': universe_sha,
+            'universe_baseline_commit': UNIVERSE_BASELINE_COMMIT,
+            'expected_contract': expected_contract,
+            'contract_note': 'gb_today_watchlist is ONE grouped request (audit option B): '
+                             'regular day = 4 markets + 8 PCF + 1 gb group + 20 LHB + 20 unlock = 53; '
+                             'holders day adds 84 = 137',
+            'status_ladder': 'COMPLETE(all mandatory fetches ok + contract met + sha + file invariant) '
+                             '/ PARTIAL(some failed) / FAILED(fatal)',
+            'red_lines': [
+                'ETF get_gb_info_by_date never used (false history, unique_zgb=1)',
+                'GP52/GP03-series gated by paid package — not fetched',
+            ],
+        }
+
+        pid = ensure_client()
+        meta['client_pid'] = pid
         if pid is None:
-            fatal = 'client plane 127.0.0.1:17709 not available and could not be started'
-        else:
-            tq.initialize(str(USER_DIR / 'daily_archive_anchor.py'))
-            tq_up = True
+            raise RuntimeError('client plane 127.0.0.1:17709 not available and could not be started')
 
-            # 1) market category snapshots (list_type=1 returns Code+Name; 2/3 return empty)
-            for mkt, label in MARKET_SNAPSHOTS.items():
-                request = f'get_stock_list({mkt!r}, list_type=1)'
-                try:
-                    rows = tq.get_stock_list(mkt, list_type=1)
-                    if rows:
-                        fp = day_dir / f'{label}.json'
-                        fp.write_text(json.dumps(rows, ensure_ascii=False, indent=1, default=str),
-                                      encoding='utf-8')
-                        add_entry(manifest, ctr, label, request, NONEMPTY, fp, day_dir)
-                    else:
-                        add_entry(manifest, ctr, label, request, EMPTY, None, day_dir,
-                                  error='empty list returned')
-                except Exception as exc:
-                    add_entry(manifest, ctr, label, request, FAILED, None, day_dir, error=repr(exc))
+        tq.initialize(str(USER_DIR / 'daily_archive_anchor.py'))
+        tq_up = True
 
-            # 2) ETF PCF for watchlist
-            for code in ETF_WATCHLIST:
-                fetch_file_artifact('pcf', code, args.date, 2, day_dir, ctr, manifest, args.date)
-                time.sleep(0.2)
-
-            # 3) today's share-capital snapshot for stock watchlist (valid AS OF TODAY only)
+        # 1) market category snapshots (list_type=1 returns Code+Name; 2/3 return empty)
+        for mkt, label in MARKET_SNAPSHOTS.items():
+            request = f'get_stock_list({mkt!r}, list_type=1)'
             try:
-                codes = json.loads(UNIVERSE_FILE.read_text(encoding='utf-8'))['codes']
-            except Exception:
-                codes = []
-            gb_today = {}
+                rows = tq.get_stock_list(mkt, list_type=1)
+                if rows:
+                    fp = day_dir / f'{label}.json'
+                    fp.write_text(json.dumps(rows, ensure_ascii=False, indent=1, default=str),
+                                  encoding='utf-8')
+                    add_entry(manifest, ctr, label, request, NONEMPTY, fp, day_dir)
+                else:
+                    add_entry(manifest, ctr, label, request, EMPTY, None, day_dir,
+                              error='empty list returned')
+            except Exception as exc:
+                add_entry(manifest, ctr, label, request, FAILED, None, day_dir, error=repr(exc))
+
+        # 2) ETF PCF for watchlist
+        for code in ETF_WATCHLIST:
+            fetch_file_artifact('pcf', code, args.date, 2, day_dir, ctr, manifest, args.date)
+            time.sleep(0.2)
+
+        # 3) today's share-capital snapshot — ONE grouped request over the frozen universe
+        gb_tally = {'n_nonempty': 0, 'n_empty': 0, 'n_failed': 0}
+        gb_today = {}
+        for code in codes:
+            try:
+                rows = tq.get_gb_info_by_date(code, args.date, args.date)
+                gb_today[code] = rows[-1] if rows else None
+                gb_tally['n_nonempty' if rows else 'n_empty'] += 1
+            except Exception as exc:
+                gb_today[code] = {'error': repr(exc)}
+                gb_tally['n_failed'] += 1
+            time.sleep(0.1)
+        if sum(gb_tally.values()) != len(codes):
+            raise RuntimeError(f'gb tally {gb_tally} does not sum to universe size {len(codes)}')
+        fp = day_dir / 'gb_today_watchlist.json'
+        payload = {
+            'as_of': args.date,
+            'universe_size': len(codes),
+            'tally': gb_tally,
+            'warning': 'single-date snapshot; historical backfill of this field is current-snapshot '
+                       'backfilled by TDX for ETFs and is NOT point-in-time for anything before archive start',
+            'stocks': gb_today,
+        }
+        fp.write_text(json.dumps(payload, ensure_ascii=False, indent=1, default=str), encoding='utf-8')
+        group_outcome = FAILED if gb_tally['n_failed'] else NONEMPTY
+        add_entry(manifest, ctr, 'gb_today_watchlist',
+                  f'get_gb_info_by_date(code,{args.date},{args.date}) grouped x {len(codes)}',
+                  group_outcome, fp, day_dir)
+        manifest[-1]['tally'] = gb_tally
+
+        # 4) LHB + unlock recent files (first 20 codes to stay light)
+        for kind, dtype in (('lhb', 6), ('unlock', 7)):
+            for code in codes[:LHB_UNLOCK_WINDOW]:
+                fetch_file_artifact(kind, code, args.date, dtype, day_dir, ctr, manifest, args.date)
+                time.sleep(0.15)
+
+        # 5) holders for current year — holders day only (Monday or --force)
+        if day_type == 'holders':
+            year = args.date[:4]
             for code in codes:
-                try:
-                    rows = tq.get_gb_info_by_date(code, args.date, args.date)
-                    gb_today[code] = rows[-1] if rows else None
-                    ctr.count(NONEMPTY if rows else EMPTY)
-                except Exception as exc:
-                    gb_today[code] = {'error': repr(exc)}
-                    ctr.count(FAILED)
-                time.sleep(0.1)
-            fp = day_dir / 'gb_today_watchlist.json'
-            payload = {
-                'as_of': args.date,
-                'warning': 'single-date snapshot; historical backfill of this field is current-snapshot backfilled by TDX for ETFs and is NOT point-in-time for anything before archive start',
-                'stocks': gb_today,
-            }
-            fp.write_text(json.dumps(payload, ensure_ascii=False, indent=1, default=str),
-                          encoding='utf-8')
-            add_entry(manifest, ctr, 'gb_today_watchlist',
-                      f'get_gb_info_by_date(code,{args.date},{args.date}) x {len(codes)}',
-                      NONEMPTY, fp, day_dir)
-
-            # 4) LHB + unlock recent files for watchlist (first 20 codes to stay light)
-            for kind, dtype in (('lhb', 6), ('unlock', 7)):
-                for code in codes[:20]:
-                    fetch_file_artifact(kind, code, args.date, dtype, day_dir, ctr, manifest, args.date)
-                    time.sleep(0.15)
-
-            # 5) holders for current year 鈥?weekly (Monday) or --force
-            if datetime.now().weekday() == 0 or args.force:
-                year = args.date[:4]
-                for code in codes:
-                    fetch_file_artifact('holders', code, f'{year}0101', 1, day_dir, ctr, manifest, args.date)
-                    time.sleep(0.15)
+                fetch_file_artifact('holders', code, f'{year}0101', 1, day_dir, ctr, manifest, args.date)
+                time.sleep(0.15)
     except BaseException as exc:
         fatal = f'{type(exc).__name__}: {exc}'
         manifest.append({'name': '__fatal__', 'outcome': FAILED, 'error': fatal,
@@ -325,23 +386,27 @@ def main() -> int:
             except Exception:
                 pass
 
-    # integrity re-check: re-read every hashed artifact and compare
     verify_shas(manifest, ctr, day_dir)
+    enforce_file_invariant(manifest, ctr, day_dir)
 
-    if fatal is not None or not manifest:
+    contract = meta.get('expected_contract')
+    contract_met = contract is not None and ctr.expected == contract
+    if fatal is not None or not manifest or (contract is not None and not contract_met):
         status = 'FAILED'
-    elif ctr.failed == 0 and ctr.sha_failures == 0:
+    elif (ctr.failed == 0 and ctr.sha_failures == 0
+          and ctr.orphan_files == 0 and ctr.missing_files == 0):
         status = 'COMPLETE'
     else:
         status = 'PARTIAL'
 
     out = {'date': args.date, 'status': status,
            'fatal': fatal,
+           'contract_met': contract_met,
            'completed_at': datetime.now(timezone.utc).isoformat(),
            'meta': meta, 'completeness': ctr.block(), 'artifacts': manifest}
     manifest_fp.write_text(json.dumps(out, ensure_ascii=False, indent=1, default=str), encoding='utf-8')
-    print(json.dumps({'date': args.date, 'status': status, 'completeness': ctr.block()},
-                     ensure_ascii=False))
+    print(json.dumps({'date': args.date, 'status': status, 'contract_met': contract_met,
+                      'completeness': ctr.block()}, ensure_ascii=False))
     return 0 if status == 'COMPLETE' else (1 if status == 'PARTIAL' else 2)
 
 

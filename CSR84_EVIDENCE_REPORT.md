@@ -76,7 +76,15 @@
 4. 归档尾部 SHA256 重读复验，不通过降级 PARTIAL。
 5. 首日轻量审计摘要入库：`manifests/archivist_smoke_20260926.json`；计划任务注册脚本入库：`automation/register_archivist.ps1`。
 
-首日重跑结果（v1.1.0，20260926）：**COMPLETE**，expected=221 / successful=221 / nonempty=130 / empty=91 / failed=0 / sha_verified=130。修补过程额外发现并修复两个真 bug（pcf 源前缀 `etfpcf` KeyError、holders 源名 `holders<code>_<year>` 被误分类为空）。
+### AUDIT-FIX2（2026-09-26 二轮审计后落地，v1.2.0）
+
+1. **universe 硬冻结**：84 只（baseline `1cabde8`）+ `universe_sha256` 记入每日 manifest；宇宙文件丢失/损坏/改名/条数≠84 一律 fatal **FAILED**（已负向测试：missing-file 与 wrong-size 均抛 RuntimeError）——expected 集合永不静默缩水。
+2. **gb 分组计数（方案 B）**：`gb_today_watchlist` = 1 个 grouped mandatory request，内部 `n_nonempty/n_empty/n_failed` tally 必须加总等于 universe_size；request 基数与 completeness 基数同一语义层。
+3. **冻结契约并断言**：普通日 = 4 markets + 8 PCF + 1 gb组 + 20 LHB + 20 unlock = **53**；holders 日（周一或 --force）= 53 + 84 = **137**；`expected_requests ≠ 契约` → FAILED（代码 bug，非数据状况）。
+4. **目录不变量**：`files_declared == files_present` 且 `orphan_files = missing_files = 0`，否则 PARTIAL；`--force` 先清空当日目录再采集，重跑不可能泄漏孤儿。
+5. 计划任务注册脚本补 `/IT`（Interactive 语义与线上一致，已实测重建）；smoke 清单加 `full_manifest_sha256` 与本机完整 manifest 密码学绑定。
+
+AUDIT-FIX2 后首日重跑（v1.2.0，20260926，holders 日）：**COMPLETE / contract_met=true**，expected=137 / successful=137 / nonempty=130 / empty=7 / failed=0 / sha_verified=130 / files_declared=130 / files_present=130 / orphan=0 / missing=0。
 
 ## 红线（永久）
 
