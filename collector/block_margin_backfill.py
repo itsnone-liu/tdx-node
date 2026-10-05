@@ -37,7 +37,8 @@ SZSE_HEADERS = {'Referer': 'https://www.szse.cn/'}
 SZSE_API = 'https://www.szse.cn/api/report/ShowReport/data'
 
 sse_cli = ThrottledClient(min_interval_s=0.22)
-szse_cli = ThrottledClient(min_interval_s=0.30)
+szse_cli = ThrottledClient(min_interval_s=0.35, max_retries=8,
+                            breaker_threshold=3, cooldown_s=150.0)
 
 
 def load_calendar() -> list[str]:

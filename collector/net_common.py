@@ -27,15 +27,26 @@ DEFAULT_HEADERS = {
 class ThrottledClient:
     """Thread-safe per-host rate limiter: even with N worker threads, the
     wall-clock interval between two requests to the same host never drops
-    below min_interval_s (the throttle is a global serialized section)."""
+    below min_interval_s (the throttle is a global serialized section).
 
-    def __init__(self, min_interval_s: float = 0.25, max_retries: int = 5):
+    Circuit breaker: SZSE (2026-10 observation) escalates from transient
+    resets to a durable IP throttle once failures pile up while the client
+    keeps hammering. On `breaker_threshold` consecutive network errors for
+    a host, the client sleeps an escalating cooldown before trying again,
+    instead of per-request backoff only."""
+
+    def __init__(self, min_interval_s: float = 0.25, max_retries: int = 5,
+                 breaker_threshold: int = 3, cooldown_s: float = 120.0):
         self.min_interval = min_interval_s
         self.max_retries = max_retries
+        self.breaker_threshold = breaker_threshold
+        self.cooldown_s = cooldown_s
         self._last_hit: dict[str, float] = {}
         self._lock = threading.Lock()
+        self._consec_fail: dict[str, int] = {}
         self.n_requests = 0
         self.n_retries = 0
+        self.n_breaker_sleeps = 0
 
     def _throttle(self, host: str):
         with self._lock:
@@ -46,14 +57,34 @@ class ThrottledClient:
                 time.sleep(wait + random.uniform(0, 0.05))
             self._last_hit[host] = time.time()
 
+    def _breaker_check(self, host: str):
+        """Called under no lock; blocks while the breaker is open."""
+        with self._lock:
+            fails = self._consec_fail.get(host, 0)
+        if fails < self.breaker_threshold:
+            return
+        with self._lock:
+            cooldown = self.cooldown_s * (2 ** min(fails - self.breaker_threshold, 4))
+        self.n_breaker_sleeps += 1
+        time.sleep(cooldown)
+
+    def _record(self, host: str, ok: bool):
+        with self._lock:
+            if ok:
+                self._consec_fail[host] = 0
+            else:
+                self._consec_fail[host] = self._consec_fail.get(host, 0) + 1
+
     def get_json(self, url: str, extra_headers: dict | None = None,
                  timeout_s: float = 25.0):
         headers = dict(DEFAULT_HEADERS)
         if extra_headers:
             headers.update(extra_headers)
+        host = urllib.parse.urlsplit(url).netloc
         last_exc = None
         for attempt in range(self.max_retries):
-            self._throttle(urllib.parse.urlsplit(url).netloc)
+            self._breaker_check(host)
+            self._throttle(host)
             try:
                 self.n_requests += 1
                 req = urllib.request.Request(url, headers=headers)
@@ -62,10 +93,13 @@ class ThrottledClient:
                 if not raw:
                     raise IOError('empty response body')
                 text = raw.decode('utf-8', errors='strict')
-                return json.loads(text)
+                out = json.loads(text)
+                self._record(host, ok=True)
+                return out
             except (urllib.error.URLError, urllib.error.HTTPError, IOError,
                     TimeoutError, json.JSONDecodeError) as exc:
                 last_exc = exc
+                self._record(host, ok=False)
                 self.n_retries += 1
                 backoff = min(30.0, (2 ** attempt)) + random.uniform(0, 1.5)
                 time.sleep(backoff)

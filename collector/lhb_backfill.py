@@ -50,7 +50,8 @@ SZSE_API = 'https://www.szse.cn/api/report/ShowReport/data'
 SZSE_HEADERS = {'Referer': 'https://www.szse.cn/disclosure/tradepublic/day.html'}
 
 sse_cli = ThrottledClient(min_interval_s=0.22)
-szse_cli = ThrottledClient(min_interval_s=0.30)
+szse_cli = ThrottledClient(min_interval_s=0.35, max_retries=8,
+                            breaker_threshold=3, cooldown_s=150.0)
 
 
 # ---------------------------------------------------------------- calendar
@@ -286,6 +287,7 @@ def main() -> int:
     if args.dates:
         days = [d.strip() for d in args.dates.split(',') if d.strip()]
     else:
+        cal = load_calendar()
         lo = args.from_ or '20210101'
         hi = args.to_ or datetime.now().strftime('%Y%m%d')
         days = [d for d in cal if lo <= d <= hi]
