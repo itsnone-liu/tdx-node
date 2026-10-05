@@ -27,7 +27,7 @@ RAW = ROOT / 'raw'
 OUT = ROOT / 'csv'
 
 COLS = ['trade_date', 'exchange', 'code', 'name', 'rzye', 'rzmre', 'rzche',
-        'rqyl', 'rqmcl', 'rqchl', 'rzrqye', 'source', 'raw_file']
+        'rqyl', 'rqye', 'rqmcl', 'rqchl', 'rzrqye', 'source', 'raw_file']
 ROWS: list[dict] = []
 
 
@@ -70,8 +70,11 @@ def parse_sse():
 
 def parse_szse():
     n = 0
+    xdir = RAW / 'margin' / 'szse_xlsx'
     for fp in sorted((RAW / 'margin' / 'szse').glob('*_p1.json')):
         day = fp.stem.split('_')[0]
+        if (xdir / f'{day}.json').exists():
+            continue  # xlsx fast path already covers this day
         obj = json.loads(fp.read_text(encoding='utf-8'))
         for cat in obj:
             if cat.get('metadata', {}).get('tabkey') != 'tab2':
@@ -84,18 +87,70 @@ def parse_szse():
                     'rzmre': (to_f(r.get('jrrzmr')) or 0) * 1e8,
                     'rzche': (to_f(r.get('jrrjmc')) or 0) * 1e8,
                     'rqyl': (to_f(r.get('jrrjyl')) or 0) * 1e4,
+                    'rqye': (to_f(r.get('jrrjye')) or 0) * 1e4,
                     'rqmcl': None, 'rqchl': None,
                     'rzrqye': (to_f(r.get('jrrzrjye')) or 0) * 1e8,
                     'source': 'SZSE official',
                     'raw_file': f'raw/margin/szse/{fp.name}'})
         n += 1
-    print(f'margin szse: {n} days', flush=True)
+    print(f'margin szse(json): {n} days', flush=True)
+
+
+# xlsx fast path: header text carries its own unit suffix, e.g. 融资余额(元)
+SZSE_XLSX_FIELDS = {  # substring -> csv field; volume vs amount decided by suffix
+    '证券代码': 'code', '证券简称': 'name', '交易日': 'trade_date',
+    '融资买入额': 'rzmre', '融资余额': 'rzye', '融资偿还额': 'rzche',
+    '融券余量': 'rqyl', '融券余额': 'rqye', '融资融券余额': 'rzrqye',
+}
+UNIT_MULT = {'元': 1.0, '万元': 1e4, '亿元': 1e8, '股': 1.0, '万股': 1e4}
+
+
+def parse_szse_xlsx():
+    n = 0
+    xdir = RAW / 'margin' / 'szse_xlsx'
+    if not xdir.exists():
+        return
+    for fp in sorted(xdir.glob('*.json')):
+        day = fp.stem
+        sheet_rows = json.loads(
+            fp.read_text(encoding='utf-8')).get('sheet_rows') or []
+        if not sheet_rows:
+            n += 1
+            continue
+        header = [h for h in sheet_rows[0].keys()]
+        colmap = {}
+        for h in header:
+            for sub, field in SZSE_XLSX_FIELDS.items():
+                if sub in h and field not in colmap.values():
+                    mult = next((m for u, m in UNIT_MULT.items()
+                                 if f'({u})' in h or f'（{u}）' in h), None)
+                    colmap[h] = (field, mult)
+        for r in sheet_rows:
+            out = {'trade_date': iso(day), 'exchange': 'SZSE',
+                   'rqmcl': None, 'rqchl': None,
+                   'source': 'SZSE official (xlsx)',
+                   'raw_file': f'raw/margin/szse_xlsx/{fp.name}'}
+            for h, (field, mult) in colmap.items():
+                v = clean(r.get(h))
+                if field == 'trade_date':
+                    out['trade_date'] = v.replace('/', '-') if '/' in v else v \
+                        if not v.isdigit() else iso(v)
+                elif field in ('code', 'name'):
+                    out[field] = v
+                elif mult is not None:
+                    out[field] = (to_f(v) or 0) * mult
+            out.setdefault('code', '')
+            out.setdefault('name', '')
+            ROWS.append(out)
+        n += 1
+    print(f'margin szse(xlsx): {n} days', flush=True)
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     parse_sse()
     parse_szse()
+    parse_szse_xlsx()
     ROWS.sort(key=lambda r: (r['trade_date'], r['exchange'], r['code']))
     fp = OUT / 'margin_daily.csv'
     with fp.open('w', newline='', encoding='utf-8-sig') as f:

@@ -18,6 +18,7 @@ PY = sys.executable
 CHAIN = [
     [PY, str(NODE / 'collector' / 'lhb_backfill.py'), '--repair'],
     [PY, str(NODE / 'collector' / 'catchup_lhb_days.py')],
+    [PY, str(NODE / 'probes' / 'probe_szse_xlsx.py')],
     [PY, str(NODE / 'collector' / 'block_margin_backfill.py'), 'block', 'szse'],
     [PY, str(NODE / 'collector' / 'block_margin_backfill.py'), 'margin', 'szse'],
     [PY, str(NODE / 'collector' / 'lhb_normalize.py')],

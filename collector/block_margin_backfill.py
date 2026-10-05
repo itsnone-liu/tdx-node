@@ -95,6 +95,52 @@ def szse_lock_held_by_other() -> bool:
     return False
 
 
+# ------------------------------------------------------------ xlsx fast path
+# SZSE ShowReport metadata advertises "excel":"xlsx". If the probe found a
+# working export variant AND we have a header->field translation for the
+# sheet, per-day fetch collapses from N pages to one file. Any failure
+# falls back to the proven JSON pagination path permanently for the run.
+XLSX_PROBE_FP = ROOT / 'xlsx_probe.json'
+XLSX_STATE = {'usable': None}
+
+
+def xlsx_url_params(catalog: str, tab: str, extra: dict):
+    if not XLSX_PROBE_FP.exists():
+        return None
+    probe = json.loads(XLSX_PROBE_FP.read_text(encoding='utf-8'))
+    winner = next((r for r in probe if r.get('xlsx')), None)
+    if not winner:
+        return None
+    path = 'data' if winner['name'].startswith('data') else 'export'
+    showtype = 'XLSX' if 'SHOWTYPE=XLSX' in winner['name'] else 'EXCEL'
+    params = {'SHOWTYPE': showtype, 'CATALOGID': catalog, 'TABKEY': tab,
+              'random': f'{random.random():.6f}'}
+    params.update(extra)
+    return ('https://www.szse.cn/api/report/ShowReport/' + path + '?' +
+            qs(params))
+
+
+def fetch_xlsx_rows(url: str) -> list[dict]:
+    """Download xlsx and return rows as dicts keyed by header text."""
+    raw = szse_cli.get_bytes(url, extra_headers=SZSE_HEADERS)
+    import io
+    import openpyxl
+    wb = openpyxl.load_workbook(io.BytesIO(raw), read_only=True)
+    ws = wb.active
+    it = ws.iter_rows(values_only=True)
+    header = None
+    out = []
+    for row in it:
+        vals = ['' if c is None else str(c).strip() for c in row]
+        if header is None:
+            if any(vals):
+                header = vals
+            continue
+        if any(vals):
+            out.append(dict(zip(header, vals)))
+    return out
+
+
 # ------------------------------------------------------------ block / sse
 def day_block_sse(day: str) -> list[dict]:
     iso = f'{day[:4]}-{day[4:6]}-{day[6:]}'
@@ -183,6 +229,25 @@ def day_margin_sse(day: str) -> list[dict]:
 # ------------------------------------------------------------ margin / szse
 def day_margin_szse(day: str) -> int:
     iso = f'{day[:4]}-{day[4:6]}-{day[6:]}'
+    # fast path: one xlsx per day (only when probe found a working variant
+    # AND a header translation is configured; falls back permanently on
+    # any failure)
+    if XLSX_STATE['usable'] is not False:
+        url = None
+        try:
+            url = xlsx_url_params('1837_xxpl', 'tab2', {'txtDate': iso})
+        except (OSError, json.JSONDecodeError):
+            pass
+        if url:
+            try:
+                raw_rows = fetch_xlsx_rows(url)
+                save_raw(f'margin/szse_xlsx/{day}.json',
+                         {'sheet_rows': raw_rows})
+                return len(raw_rows)
+            except Exception as exc:  # noqa: BLE001
+                print(f'  xlsx path failed ({exc!r}); JSON fallback',
+                      flush=True)
+                XLSX_STATE['usable'] = False
     rows = 0
     pageno, pagecount = 1, 1
     while pageno <= pagecount:

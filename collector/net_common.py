@@ -75,6 +75,36 @@ class ThrottledClient:
             else:
                 self._consec_fail[host] = self._consec_fail.get(host, 0) + 1
 
+    def get_bytes(self, url: str, extra_headers: dict | None = None,
+                  timeout_s: float = 60.0):
+        """Binary GET with the same throttle/breaker/retry machinery."""
+        headers = dict(DEFAULT_HEADERS)
+        if extra_headers:
+            headers.update(extra_headers)
+        host = urllib.parse.urlsplit(url).netloc
+        last_exc = None
+        for attempt in range(self.max_retries):
+            self._breaker_check(host)
+            self._throttle(host)
+            try:
+                self.n_requests += 1
+                req = urllib.request.Request(url, headers=headers)
+                with urllib.request.urlopen(req, timeout=timeout_s) as r:
+                    raw = r.read()
+                if not raw:
+                    raise IOError('empty response body')
+                self._record(host, ok=True)
+                return raw
+            except (urllib.error.URLError, urllib.error.HTTPError, IOError,
+                    TimeoutError) as exc:
+                last_exc = exc
+                self._record(host, ok=False)
+                self.n_retries += 1
+                backoff = min(30.0, (2 ** attempt)) + random.uniform(0, 1.5)
+                time.sleep(backoff)
+        raise RuntimeError(f'GET(bytes) failed after {self.max_retries} '
+                           f'retries: {url} :: {last_exc!r}')
+
     def get_json(self, url: str, extra_headers: dict | None = None,
                  timeout_s: float = 25.0):
         headers = dict(DEFAULT_HEADERS)
