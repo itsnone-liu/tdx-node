@@ -171,17 +171,17 @@ def process_day(day: str, state: dict) -> dict:
     def work(tg):
         dqrq_iso, zqdm, zbdm = tg
         try:
-            seats = fetch_szse_detail(dqrq_iso, zqdm, zbdm, day)
-            return 1 if seats else 0
+            fetch_szse_detail(dqrq_iso, zqdm, zbdm, day)
         except RuntimeError as exc:
             print(f'    detail FAIL {dqrq_iso} {zqdm} {zbdm}: {exc}', flush=True)
-            return -1
+        # success == raw file exists (empty-seat disclosures count as done)
+        return (RAW / 'szse_detail' / f'{day}_{zqdm}_{zbdm}.json').exists()
 
     n_detail_ok = 0
     if targets:
         with ThreadPoolExecutor(max_workers=3) as pool:
-            for r in pool.map(work, targets):
-                n_detail_ok += max(r, 0)
+            for ok in pool.map(work, targets):
+                n_detail_ok += 1 if ok else 0
 
     rec = {
         'status': 'COMPLETE' if n_detail_ok == len(targets) else 'PARTIAL',
