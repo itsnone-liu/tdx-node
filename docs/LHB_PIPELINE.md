@@ -70,7 +70,13 @@ buy_amt, sell_amt(元), abnormal_start/end, source, raw_file`
 - **绝不要并发双开采集**：两个进程同打 SZSE 会触发 RemoteDisconnected
   风暴（2026-10-06 实测，单进程 3 并发 0.3s 限速稳定，双进程即挂）。
   已加单实例锁；`--repair` 绕过锁，也只能在主任务空闲时跑。
+- **回填运行期间任何进程零 SZSE 请求**（2026-10-05 实测：连单次并发探测
+  请求都会触发风暴并拖累主任务；单位验证等需求一律改读本地 raw）。
+- **熔断器**（net_common.ThrottledClient）：同主机连续 3 次网络错误 →
+  递增冷却 150s×2^n（封顶 ~32min）再试，共 8 次；SZSE 间隔 0.35s。
 - 非交易日/无上榜日返回空 data 属正常（状态仍记 COMPLETE）。
 - 全量回填 ~1393 交易日 × ~25s ≈ 9-10h；中断重跑自动续。
+- 明细成功语义 = **raw 文件存在**（合法空席位披露计成功，不永判 PARTIAL）；
+  FAILED/PARTIAL 由 `catchup_lhb_days.py` 状态驱动兜底重跑。
 - gate 需官方回填覆盖 TDX 事件窗口（当前 TDX 副本事件在
   2026-05-26..2026-08-31）才能出对账结果。
