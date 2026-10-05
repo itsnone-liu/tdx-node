@@ -66,6 +66,17 @@ def main():
     results.append(try_variant('data?SHOWTYPE=EXCEL', BASE + 'data', c2))
     time.sleep(1.0)
     results.append(try_variant('export?SHOWTYPE=XLSX', BASE + 'export', common))
+    time.sleep(1.0)
+    # block daily list (1932) xlsx?
+    results.append(try_variant('block1932 data?SHOWTYPE=XLSX', BASE + 'data', {
+        'SHOWTYPE': 'XLSX', 'CATALOGID': '1932_dzjyzqjy_after', 'TABKEY': 'tab1',
+        'txtStart': DAY, 'txtEnd': DAY, 'random': '0.43'}))
+    time.sleep(1.0)
+    # block per-stock detail (1265) with empty code -> whole day?
+    results.append(try_variant('block1265-nocode data?SHOWTYPE=XLSX',
+                               BASE + 'data', {
+        'SHOWTYPE': 'XLSX', 'CATALOGID': '1265', 'TABKEY': 'tab1',
+        'txtkey2': '', 'txtKsrq': DAY, 'txtZzrq': DAY, 'random': '0.44'}))
     OUT.write_text(json.dumps(results, ensure_ascii=False, indent=1),
                    encoding='utf-8')
     winner = next((r['name'] for r in results if r.get('xlsx')), None)

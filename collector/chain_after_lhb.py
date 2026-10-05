@@ -26,6 +26,7 @@ CHAIN = [
     [PY, str(NODE / 'collector' / 'margin_normalize.py')],
     [PY, str(NODE / 'collector' / 'lhb_crosscheck_tdx.py')],
     [PY, str(NODE / 'collector' / 'quality_audit.py')],
+    [PY, str(NODE / 'collector' / 'make_delivery_report.py')],
 ]
 
 
