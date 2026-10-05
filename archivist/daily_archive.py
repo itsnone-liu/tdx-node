@@ -139,18 +139,82 @@ def pid_of_listener() -> int | None:
         return None
 
 
+# "登 录" button center, relative to the login dialog window rect (class #32770,
+# observed 2026-10-05: dialog 564x428, button center at dialog-relative (282, 357)).
+# The dialog auto-fills account+password (记住密码); pressing the button is the only
+# missing step when the client's own auto-login stops working (outage 20260928-20261004).
+LOGIN_CLICK_REL = (0.50, 0.834)
+
+
+def _enum_login_dialogs(pid: int) -> list[tuple[int, int, int, int]]:
+    """Visible top-level #32770 dialogs of pid with a plausible login-dialog size."""
+    import ctypes
+    from ctypes import wintypes
+    user32 = ctypes.windll.user32
+    found: list[tuple[int, int, int, int]] = []
+    EnumProc = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+
+    def on_win(hwnd, _l):
+        if user32.IsWindowVisible(hwnd):
+            p = wintypes.DWORD()
+            user32.GetWindowThreadProcessId(hwnd, ctypes.byref(p))
+            if p.value == pid:
+                buf = ctypes.create_unicode_buffer(64)
+                user32.GetClassNameW(hwnd, buf, 64)
+                if buf.value == '#32770':
+                    r = wintypes.RECT()
+                    user32.GetWindowRect(hwnd, ctypes.byref(r))
+                    w, h = r.right - r.left, r.bottom - r.top
+                    if 300 <= w <= 900 and 250 <= h <= 700:
+                        found.append((r.left, r.top, w, h))
+        return True
+
+    user32.EnumWindows(EnumProc(on_win), 0)
+    return found
+
+
+def click_login_button(pid: int) -> bool:
+    """Click the remembered-credential 登 录 button if the login dialog is up.
+
+    No credentials are read or typed — the dialog already carries the saved
+    account/password; this only presses the button (user-sanctioned 2026-10-05).
+    """
+    import ctypes
+    user32 = ctypes.windll.user32
+    for (l, t, w, h) in _enum_login_dialogs(pid):
+        x = int(l + LOGIN_CLICK_REL[0] * w)
+        y = int(t + LOGIN_CLICK_REL[1] * h)
+        user32.SetCursorPos(x, y)
+        time.sleep(0.3)
+        user32.mouse_event(0x02, 0, 0, 0, 0)  # LEFTDOWN
+        time.sleep(0.08)
+        user32.mouse_event(0x04, 0, 0, 0, 0)  # LEFTUP
+        print(f'login dialog detected ({w}x{h} at {l},{t}); clicked 登录 at ({x},{y})',
+              flush=True)
+        return True
+    return False
+
+
 def ensure_client(max_wait_s: int = 240) -> int | None:
     if port_open(17709):
         return pid_of_listener()
     if not TDX_EXE.exists():
         print(f'client exe missing: {TDX_EXE}', file=sys.stderr)
         return None
-    subprocess.Popen([str(TDX_EXE)], cwd=str(CLIENT_DIR))
+    proc = subprocess.Popen([str(TDX_EXE)], cwd=str(CLIENT_DIR))
     deadline = time.time() + max_wait_s
+    clicked = 0
+    next_click_at = time.time() + 60  # give the client's own auto-login 60s first
     while time.time() < deadline:
         if port_open(17709):
             time.sleep(5)
             return pid_of_listener()
+        if clicked < 2 and time.time() >= next_click_at:
+            if click_login_button(proc.pid):
+                clicked += 1
+                next_click_at = time.time() + 100
+            else:
+                next_click_at = time.time() + 30
         time.sleep(5)
     return None
 
@@ -284,7 +348,7 @@ def main() -> int:
                              + (len(codes) if day_type == 'holders' else 0))
         meta = {
             'node': 'tdx-node free account',
-            'archivist_version': '1.2.0',
+            'archivist_version': '1.3.0',
             'tqcenter_version': tqcenter_version(),
             'client_pid': None,
             'http_plane': '127.0.0.1:17709',
