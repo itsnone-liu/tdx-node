@@ -18,6 +18,8 @@ import random
 import re
 import sys
 import time
+import os
+import msvcrt
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -57,19 +59,49 @@ def load_state() -> dict:
 
 
 def save_state(state: dict):
-    merged: dict = {}
-    try:
-        if STATE_FP.exists():
-            merged.update(json.loads(STATE_FP.read_text(encoding='utf-8')))
-    except (json.JSONDecodeError, OSError):
-        pass
-    merged.update(state)
-    tmp = STATE_FP.with_suffix('.tmp')
-    tmp.write_text(json.dumps(merged, ensure_ascii=False, indent=1),
-                   encoding='utf-8')
-    tmp.replace(STATE_FP)
-    state.clear()
-    state.update(merged)
+    # Multiple SSE workers (block + margin) share this state file. Serialize
+    # the read/merge/replace transaction across processes to avoid Windows
+    # PermissionError/last-writer races.
+    lock_fp = ROOT / '.state.lock'
+    lock_fp.parent.mkdir(parents=True, exist_ok=True)
+    with lock_fp.open('a+b') as lockf:
+        lockf.seek(0, os.SEEK_END)
+        if lockf.tell() == 0:
+            lockf.write(b'0')
+            lockf.flush()
+        while True:
+            try:
+                lockf.seek(0)
+                msvcrt.locking(lockf.fileno(), msvcrt.LK_NBLCK, 1)
+                break
+            except OSError:
+                time.sleep(0.05)
+        try:
+            merged: dict = {}
+            try:
+                if STATE_FP.exists():
+                    merged.update(json.loads(STATE_FP.read_text(encoding='utf-8')))
+            except (json.JSONDecodeError, OSError):
+                pass
+            merged.update(state)
+            tmp = ROOT / f'.backfill_state.{os.getpid()}.{random.randrange(1<<30)}.tmp'
+            tmp.write_text(json.dumps(merged, ensure_ascii=False, indent=1),
+                           encoding='utf-8')
+            # Windows may briefly deny replace if another process has the file
+            # open; retry while holding the cross-process state lock.
+            for attempt in range(12):
+                try:
+                    tmp.replace(STATE_FP)
+                    break
+                except PermissionError:
+                    if attempt == 11:
+                        raise
+                    time.sleep(0.1 * (attempt + 1))
+            state.clear()
+            state.update(merged)
+        finally:
+            lockf.seek(0)
+            msvcrt.locking(lockf.fileno(), msvcrt.LK_UNLCK, 1)
 
 
 def save_raw(rel: str, obj) -> None:
@@ -108,7 +140,15 @@ def xlsx_url_params(catalog: str, tab: str, extra: dict):
     if not XLSX_PROBE_FP.exists():
         return None
     probe = json.loads(XLSX_PROBE_FP.read_text(encoding='utf-8'))
-    winner = next((r for r in probe if r.get('xlsx')), None)
+    if catalog == '1837_xxpl':
+        candidates = [r for r in probe if not r.get('name', '').startswith('block')]
+    elif catalog == '1932_dzjyzqjy_after':
+        candidates = [r for r in probe if r.get('name', '').startswith('block1932')]
+    elif catalog == '1265':
+        candidates = [r for r in probe if r.get('name', '').startswith('block1265')]
+    else:
+        candidates = probe
+    winner = next((r for r in candidates if r.get('xlsx')), None)
     if not winner:
         return None
     path = 'data' if winner['name'].startswith('data') else 'export'
