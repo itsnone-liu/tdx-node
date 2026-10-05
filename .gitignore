@@ -50,3 +50,7 @@ venv/
 .jspace/
 .DS_Store
 Thumbs.db
+
+# LHB official-source dataset (raw + csv + state) ¡ª data, not code
+/lhb/
+/raw/
