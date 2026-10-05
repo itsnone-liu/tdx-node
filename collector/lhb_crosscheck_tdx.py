@@ -28,15 +28,19 @@ OUT_FP = NODE / 'lhb' / 'crosscheck_report.json'
 
 
 def load_official():
-    """(code, date) -> side -> rank -> (name, buy, sell)"""
-    idx: dict = defaultdict(lambda: defaultdict(dict))
+    """(code, date) -> side -> rank -> list[(name, buy, sell)].
+
+    Keep all reason rows: a stock can qualify under multiple reasons on one
+    day, while TDX's rolled-up event doesn't use the same reason taxonomy.
+    """
+    idx: dict = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     with SEATS_FP.open(encoding='utf-8-sig') as f:
         for r in csv.DictReader(f):
             key = (r['code'], r['trade_date'])
-            idx[key][r['side']][int(r['rank'])] = (
-                r['seat_name'],
-                float(r['buy_amt']) if r['buy_amt'] else None,
-                float(r['sell_amt']) if r['sell_amt'] else None)
+            idx[key][r['side']][int(r['rank'])].append(
+                (r['seat_name'],
+                 float(r['buy_amt']) if r['buy_amt'] else None,
+                 float(r['sell_amt']) if r['sell_amt'] else None))
     return idx
 
 
@@ -95,8 +99,21 @@ def main() -> int:
                 if rank not in t or rank not in o:
                     continue
                 tn, tb, ts, tnet = t[rank]
-                on, ob, os_ = o[rank]
+                # Match any official reason-row candidate; TDX and exchange
+                # reason taxonomy/grouping can differ on multi-day events.
+                candidates = o[rank]
+                candidate = next((x for x in candidates if x[0] == tn),
+                                 candidates[0] if len(candidates) == 1 else None)
                 n_seats += 1
+                if candidate is None:
+                    n_amt_match += 0
+                    pair_ok = False
+                    if len(worst) < 25:
+                        worst.append({'code': code, 'date': d, 'side': side,
+                                      'rank': rank, 'tdx': [tn, tb, ts, tnet],
+                                      'official_candidates': candidates})
+                    continue
+                on, ob, os_ = candidate
                 name_ok = tn == on
                 n_name_match += name_ok
                 tprimary = tb if side == 'B' else ts
