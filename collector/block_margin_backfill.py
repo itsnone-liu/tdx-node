@@ -20,7 +20,7 @@ import sys
 import time
 import os
 import msvcrt
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -358,8 +358,19 @@ def main() -> int:
         hi = args.to_ or datetime.now().strftime('%Y%m%d')
         days = [d for d in cal if lo <= d <= hi]
     prefix = f'{args.kind}/{args.exchange}/'
-    todo = [d for d in days
-            if state.get(prefix + d, {}).get('status') != 'COMPLETE']
+    # SZSE margin publishes T+1 morning: a zero-row COMPLETE inside the last
+    # 7 days is a publication-window artifact, not a real holiday/empty day —
+    # keep it retryable. Older zero-row days stay COMPLETE (idempotent backfill).
+    retry_cutoff = (datetime.now() - timedelta(days=7)).strftime('%Y%m%d')
+
+    def _needs(d: str) -> bool:
+        rec = state.get(prefix + d, {})
+        if rec.get('status') != 'COMPLETE':
+            return True
+        return (prefix == 'margin/szse/' and rec.get('rows') == 0
+                and d >= retry_cutoff)
+
+    todo = [d for d in days if _needs(d)]
     print(f'{len(days)} days, {len(todo)} to do ({prefix})', flush=True)
     for i, day in enumerate(todo, 1):
         try:
