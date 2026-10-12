@@ -28,7 +28,7 @@ STATE_FP = ROOT / 'backfill_state.json'
 
 COLS = ['trade_date', 'exchange', 'code', 'name', 'price', 'volume', 'amount',
         'buyer', 'seller', 'buy_is_institution', 'sell_is_institution',
-        'is_special_session', 'source', 'raw_file']
+        'is_special_session', 'source', 'raw_file', 'available_at']
 ROWS: list[dict] = []
 
 
@@ -103,6 +103,10 @@ def main():
     parse_sse()
     parse_szse()
     ROWS.sort(key=lambda r: (r['trade_date'], r['exchange'], r['code']))
+    import sys as _s, os as _o
+    _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+    import pit
+    pit.stamp(ROWS, 'block')
     fp = OUT / 'block_trades.csv'
     with fp.open('w', newline='', encoding='utf-8-sig') as f:
         w = csv.DictWriter(f, fieldnames=COLS)

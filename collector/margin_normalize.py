@@ -27,7 +27,8 @@ RAW = ROOT / 'raw'
 OUT = ROOT / 'csv'
 
 COLS = ['trade_date', 'exchange', 'code', 'name', 'rzye', 'rzmre', 'rzche',
-        'rqyl', 'rqye', 'rqmcl', 'rqchl', 'rzrqye', 'source', 'raw_file']
+        'rqyl', 'rqye', 'rqmcl', 'rqchl', 'rzrqye', 'source', 'raw_file',
+        'available_at']
 ROWS: list[dict] = []
 
 
@@ -162,6 +163,10 @@ def main():
     parse_szse()
     parse_szse_xlsx()
     ROWS.sort(key=lambda r: (r['trade_date'], r['exchange'], r['code']))
+    import sys as _s, os as _o
+    _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+    import pit
+    pit.stamp(ROWS, 'margin')
     fp = OUT / 'margin_daily.csv'
     with fp.open('w', newline='', encoding='utf-8-sig') as f:
         w = csv.DictWriter(f, fieldnames=COLS)

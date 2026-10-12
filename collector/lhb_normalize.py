@@ -27,11 +27,11 @@ REFTYPE_FP = NODE / 'manifests' / 'sse_reftype_map.json'
 SEAT_COLS = ['trade_date', 'exchange', 'board', 'code', 'name', 'reason_code',
              'reason_text', 'side', 'rank', 'seat_name', 'is_institution',
              'is_northbound', 'buy_amt', 'sell_amt', 'abnormal_start',
-             'abnormal_end', 'source', 'raw_file']
+             'abnormal_end', 'source', 'raw_file', 'available_at']
 AGG_COLS = ['trade_date', 'exchange', 'board', 'code', 'name', 'reason_code',
             'reason_text', 'n_buy_seats', 'n_sell_seats', 'buy_amt', 'sell_amt',
             'net_amt', 'inst_buy', 'inst_sell', 'inst_net', 'nb_buy', 'nb_sell',
-            'nb_net', 'source']
+            'nb_net', 'source', 'available_at']
 
 NB_PAT = re.compile(r'(沪股通专用|深股通专用|机构专用)')
 
@@ -246,6 +246,10 @@ def main():
     parse_szse()
     SEAT_ROWS.sort(key=lambda r: (r['trade_date'], r['exchange'], r['code'],
                                   str(r['reason_code']), r['side'], r['rank']))
+    import sys as _s, os as _o
+    _s.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
+    import pit
+    pit.stamp(SEAT_ROWS, 'lhb')
 
     seats_fp = OUT / 'lhb_seats.csv'
     with seats_fp.open('w', newline='', encoding='utf-8-sig') as f:
@@ -254,6 +258,7 @@ def main():
         w.writerows(SEAT_ROWS)
 
     agg_rows = aggregate()
+    pit.stamp(agg_rows, 'lhb')
     agg_fp = OUT / 'lhb_daily_stock.csv'
     with agg_fp.open('w', newline='', encoding='utf-8-sig') as f:
         w = csv.DictWriter(f, fieldnames=AGG_COLS)
