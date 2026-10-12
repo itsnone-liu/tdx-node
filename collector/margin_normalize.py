@@ -69,29 +69,39 @@ def parse_sse():
 
 
 def parse_szse():
+    # 2026-10-12 修复：SZSE 每天约 106 页，旧版只读 *_p1.json，每天丢 ~99% 明细行
+    # （p1 可能空、或只有 20 行）。改为按天聚合全部 *_p*.json 并按 (day, code) 去重。
     n = 0
     xdir = RAW / 'margin' / 'szse_xlsx'
-    for fp in sorted((RAW / 'margin' / 'szse').glob('*_p1.json')):
-        day = fp.stem.split('_')[0]
+    byday: dict[str, list[Path]] = {}
+    for fp in sorted((RAW / 'margin' / 'szse').glob('*_p*.json')):
+        byday.setdefault(fp.stem.split('_')[0], []).append(fp)
+    for day, fps in sorted(byday.items()):
         if (xdir / f'{day}.json').exists():
             continue  # xlsx fast path already covers this day
-        obj = json.loads(fp.read_text(encoding='utf-8'))
-        for cat in obj:
-            if cat.get('metadata', {}).get('tabkey') != 'tab2':
-                continue
-            for r in cat.get('data') or []:
-                ROWS.append({
-                    'trade_date': iso(day), 'exchange': 'SZSE',
-                    'code': clean(r.get('zqdm')), 'name': clean(r.get('zqjc')),
-                    'rzye': (to_f(r.get('jrrzye')) or 0) * 1e8,
-                    'rzmre': (to_f(r.get('jrrzmr')) or 0) * 1e8,
-                    'rzche': (to_f(r.get('jrrjmc')) or 0) * 1e8,
-                    'rqyl': (to_f(r.get('jrrjyl')) or 0) * 1e4,
-                    'rqye': (to_f(r.get('jrrjye')) or 0) * 1e4,
-                    'rqmcl': None, 'rqchl': None,
-                    'rzrqye': (to_f(r.get('jrrzrjye')) or 0) * 1e8,
-                    'source': 'SZSE official',
-                    'raw_file': f'raw/margin/szse/{fp.name}'})
+        seen: set[str] = set()
+        for fp in fps:
+            obj = json.loads(fp.read_text(encoding='utf-8'))
+            for cat in obj:
+                if cat.get('metadata', {}).get('tabkey') != 'tab2':
+                    continue
+                for r in cat.get('data') or []:
+                    code = clean(r.get('zqdm'))
+                    if code in seen:
+                        continue
+                    seen.add(code)
+                    ROWS.append({
+                        'trade_date': iso(day), 'exchange': 'SZSE',
+                        'code': code, 'name': clean(r.get('zqjc')),
+                        'rzye': (to_f(r.get('jrrzye')) or 0) * 1e8,
+                        'rzmre': (to_f(r.get('jrrzmr')) or 0) * 1e8,
+                        'rzche': (to_f(r.get('jrrjmc')) or 0) * 1e8,
+                        'rqyl': (to_f(r.get('jrrjyl')) or 0) * 1e4,
+                        'rqye': (to_f(r.get('jrrjye')) or 0) * 1e4,
+                        'rqmcl': None, 'rqchl': None,
+                        'rzrqye': (to_f(r.get('jrrzrjye')) or 0) * 1e8,
+                        'source': 'SZSE official',
+                        'raw_file': f'raw/margin/szse/{fp.name}'})
         n += 1
     print(f'margin szse(json): {n} days', flush=True)
 

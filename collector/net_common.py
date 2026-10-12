@@ -14,6 +14,15 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+# 2026-10-08: SZSE deployed a TLS-fingerprint WAF (real Chrome passes, urllib
+# ClientHello gets connection-dropped after handshake). curl_cffi impersonates
+# Chrome's TLS stack; use it when present, urllib as fallback for SSE etc.
+try:
+    from curl_cffi import requests as _cffi_requests
+    _CFFI = True
+except ImportError:
+    _CFFI = False
+
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/124.0 Safari/537.36')
 
@@ -75,6 +84,38 @@ class ThrottledClient:
             else:
                 self._consec_fail[host] = self._consec_fail.get(host, 0) + 1
 
+    def _http_get(self, url: str, headers: dict, timeout_s: float):
+        """Single GET. Relay (real browser) > curl_cffi (chrome TLS) > urllib.
+        SZSE_RELAY env (http://127.0.0.1:8321) routes requests through a
+        local real-Chrome relay — 2026-10-08: WAF flaps between fast-drop
+        and black-hole; only genuine browser fetch is stable."""
+        import os
+        relay = os.environ.get('SZSE_RELAY', '')
+        if relay:
+            import urllib.parse as _up
+            rurl = relay + '/rel?url=' + _up.quote(url, safe='')
+            req = urllib.request.Request(rurl, headers={'User-Agent': UA})
+            with urllib.request.urlopen(req, timeout=timeout_s + 30) as r:
+                raw = r.read()
+            if not raw:
+                raise IOError('relay: empty response body')
+            return raw
+        if _CFFI:
+            r = _cffi_requests.get(url, headers=headers,
+                                   impersonate='chrome', timeout=timeout_s)
+            if r.status_code >= 400:
+                raise IOError(f'HTTP {r.status_code}')
+            raw = r.content
+            if not raw:
+                raise IOError('empty response body')
+            return raw
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=timeout_s) as r:
+            raw = r.read()
+        if not raw:
+            raise IOError('empty response body')
+        return raw
+
     def get_bytes(self, url: str, extra_headers: dict | None = None,
                   timeout_s: float = 60.0):
         """Binary GET with the same throttle/breaker/retry machinery."""
@@ -88,15 +129,10 @@ class ThrottledClient:
             self._throttle(host)
             try:
                 self.n_requests += 1
-                req = urllib.request.Request(url, headers=headers)
-                with urllib.request.urlopen(req, timeout=timeout_s) as r:
-                    raw = r.read()
-                if not raw:
-                    raise IOError('empty response body')
+                raw = self._http_get(url, headers, timeout_s)
                 self._record(host, ok=True)
                 return raw
-            except (urllib.error.URLError, urllib.error.HTTPError, IOError,
-                    TimeoutError) as exc:
+            except Exception as exc:
                 last_exc = exc
                 self._record(host, ok=False)
                 self.n_retries += 1
@@ -117,17 +153,12 @@ class ThrottledClient:
             self._throttle(host)
             try:
                 self.n_requests += 1
-                req = urllib.request.Request(url, headers=headers)
-                with urllib.request.urlopen(req, timeout=timeout_s) as r:
-                    raw = r.read()
-                if not raw:
-                    raise IOError('empty response body')
+                raw = self._http_get(url, headers, timeout_s)
                 text = raw.decode('utf-8', errors='strict')
                 out = json.loads(text)
                 self._record(host, ok=True)
                 return out
-            except (urllib.error.URLError, urllib.error.HTTPError, IOError,
-                    TimeoutError, json.JSONDecodeError) as exc:
+            except Exception as exc:
                 last_exc = exc
                 self._record(host, ok=False)
                 self.n_retries += 1
