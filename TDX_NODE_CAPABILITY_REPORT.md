@@ -118,6 +118,22 @@ POST http://127.0.0.1:17709/
 
 兼容性注意：HTTP 转发 `get_gpjy_value` 时，公开 Python 参数名 `field_list` 没有被转换，底层会报 `json has no table_list`；HTTP 方式需传 `table_list`。即使正确传入 `table_list=["GP52"]`，当前账号仍返回 null。
 
+### 5.1 面板字段单位与档位（写数入库前必读）
+
+面板（17709）与协议 L1（TCP 7709 op11）是同一份行情的两个出口，但**单位/档位不同**，
+混用会静默出数据错：
+
+- **`Amount` 面板是万元，L1 是元** → 面板取到必须 ×10⁴；
+  三角校验 `Average == Amount(万)×1e4 / Volume(手) / 100`。
+- **面板只回 1 档**（`Buyp[1..4]`/`Sellp[1..4]` 恒 0）→ 要五档必须走协议 L1 的 `quotes()`。
+- **面板没有 `servertime`/`reversed_bytes0`** → 判新鲜度只能用 L1 的时间戳，
+  面板侧记录的是采集时刻而非行情时刻。
+- 停牌判定用「服务器不返回记录」（missing），**不用** `price==0 && vol==0`
+  （盘前全市场 5576 只全部返回 0 值且有记录）。
+
+完整对照表 + 现成校验函数见 tdx-protocol 仓库：
+`docs/PANEL_17709_UNITS.md`、`realclient/panel_units.py`（含 `map_panel_to_l1()` 与离线测试）。
+
 ## 6. 数据工程建议
 
 ### 推荐架构
