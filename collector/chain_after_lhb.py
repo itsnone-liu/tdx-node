@@ -5,12 +5,13 @@ LHB_PIPELINE.md), then normalize + crosscheck gate.
 
 Polls lhb/backfill_run.log for a FINISHED line (with a hard timeout).
 """
+import os
 import subprocess
 import sys
 import time
 from pathlib import Path
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 LHB_LOG = NODE / 'lhb' / 'backfill_run.log'
 TIMEOUT_S = 14 * 3600  # generous: LHB eta ~9h
 PY = sys.executable

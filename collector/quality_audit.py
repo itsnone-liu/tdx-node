@@ -7,12 +7,13 @@ Checks:
   4. Day-of-week/coverage: every calendar day has state, COMPLETE or noted
 """
 from __future__ import annotations
+import os
 import csv
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 LHB = NODE / 'lhb'
 BM = NODE / 'blockmargin'
 CAL = set(json.loads((NODE / 'manifests' / 'trading_calendar_2021_2026.json')

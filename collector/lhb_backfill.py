@@ -25,6 +25,7 @@ Usage:
   python lhb_backfill.py                                # full backfill
 """
 from __future__ import annotations
+import os
 import argparse
 import json
 import random
@@ -35,9 +36,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from net_common import ThrottledClient, qs  # noqa: E402
+from net_common import ThrottledClient, qs, pid_alive  # noqa: E402
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 LHB = NODE / 'lhb'
 RAW = LHB / 'raw'
 STATE_FP = LHB / 'backfill_state.json'
@@ -263,12 +264,7 @@ def main() -> int:
     if lock_fp.exists() and not args.repair:
         try:
             pid = int(lock_fp.read_text().strip())
-            import ctypes
-            kernel32 = ctypes.windll.kernel32
-            SYNCHRONIZE = 0x00100000
-            h = kernel32.OpenProcess(SYNCHRONIZE, False, pid)
-            if h:
-                kernel32.CloseHandle(h)
+            if pid_alive(pid):
                 print(f'another backfill (pid {pid}) is running — aborting',
                       flush=True)
                 return 2

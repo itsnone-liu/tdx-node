@@ -15,13 +15,14 @@ Output schema (margin_daily.csv):
 python margin_normalize.py [--verify]  : verify SZSE units via TDX close px
 """
 from __future__ import annotations
+import os
 import csv
 import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 ROOT = NODE / 'blockmargin'
 RAW = ROOT / 'raw'
 OUT = ROOT / 'csv'

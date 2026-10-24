@@ -10,6 +10,7 @@ All monetary amounts are normalized to yuan (SSE STAR source is 万元, x10000).
 Run any time — it processes whatever raw days exist (partial-safe).
 """
 from __future__ import annotations
+import os
 import csv
 import json
 import re
@@ -18,7 +19,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 RAW = NODE / 'lhb' / 'raw'
 OUT = NODE / 'lhb' / 'csv'
 STATE_FP = NODE / 'lhb' / 'backfill_state.json'

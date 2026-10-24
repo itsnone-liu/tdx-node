@@ -14,6 +14,7 @@ seat rows and no more than 1% official-side day-code pairs unexplained;
 exit 1 otherwise. Writes lhb/crosscheck_report.json.
 """
 from __future__ import annotations
+import os
 import csv
 import json
 import re
@@ -21,7 +22,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 TDX_DIR = NODE / 'tdx-tq-v773' / 'PYPlugins' / 'data'
 SEATS_FP = NODE / 'lhb' / 'csv' / 'lhb_seats.csv'
 OUT_FP = NODE / 'lhb' / 'crosscheck_report.json'

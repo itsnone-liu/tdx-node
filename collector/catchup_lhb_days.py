@@ -3,11 +3,12 @@
 PARTIAL). Full reprocess is safe: raw files are append-only, so this only
 re-fetches what is missing (e.g. list page 2 that never got saved)."""
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 STATE_FP = NODE / 'lhb' / 'backfill_state.json'
 
 

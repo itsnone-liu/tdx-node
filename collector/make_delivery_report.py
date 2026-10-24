@@ -3,9 +3,10 @@
 Run at the very end of the chain (after normalize + gate)."""
 import csv
 import json
+import os
 from pathlib import Path
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 DOC = NODE / 'docs' / 'DELIVERY.md'
 
 

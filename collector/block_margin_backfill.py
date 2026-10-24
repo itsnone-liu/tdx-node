@@ -19,14 +19,13 @@ import re
 import sys
 import time
 import os
-import msvcrt
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from net_common import ThrottledClient, qs  # noqa: E402
+from net_common import ThrottledClient, qs, pid_alive  # noqa: E402
 
-NODE = Path(r'D:\tdx-node')
+NODE = Path(os.environ.get('TDX_NODE') or r'D:\tdx-node').expanduser()  # TDX_NODE env → Linux/米线; 默认仍是 Windows D:\tdx-node
 ROOT = NODE / 'blockmargin'
 RAW = ROOT / 'raw'
 STATE_FP = ROOT / 'backfill_state.json'
@@ -41,6 +40,35 @@ SZSE_API = 'https://www.szse.cn/api/report/ShowReport/data'
 sse_cli = ThrottledClient(min_interval_s=0.22)
 szse_cli = ThrottledClient(min_interval_s=0.35, max_retries=8,
                             breaker_threshold=3, cooldown_s=150.0)
+
+
+# 跨平台文件锁：Windows=msvcrt.locking，POSIX=fcntl.flock。原实现硬 import
+# msvcrt，Linux 上 ImportError 直接起不来。
+try:
+    import msvcrt as _msvcrt
+except ImportError:
+    _msvcrt = None
+if _msvcrt is None:
+    import fcntl as _fcntl
+
+    def _lock_acquire(f):
+        _fcntl.flock(f.fileno(), _fcntl.LOCK_EX)
+
+    def _lock_release(f):
+        _fcntl.flock(f.fileno(), _fcntl.LOCK_UN)
+else:
+    def _lock_acquire(f):
+        while True:
+            try:
+                f.seek(0)
+                _msvcrt.locking(f.fileno(), _msvcrt.LK_NBLCK, 1)
+                return
+            except OSError:
+                time.sleep(0.05)
+
+    def _lock_release(f):
+        f.seek(0)
+        _msvcrt.locking(f.fileno(), _msvcrt.LK_UNLCK, 1)
 
 
 def load_calendar() -> list[str]:
@@ -69,13 +97,7 @@ def save_state(state: dict):
         if lockf.tell() == 0:
             lockf.write(b'0')
             lockf.flush()
-        while True:
-            try:
-                lockf.seek(0)
-                msvcrt.locking(lockf.fileno(), msvcrt.LK_NBLCK, 1)
-                break
-            except OSError:
-                time.sleep(0.05)
+        _lock_acquire(lockf)
         try:
             merged: dict = {}
             try:
@@ -100,8 +122,7 @@ def save_state(state: dict):
             state.clear()
             state.update(merged)
         finally:
-            lockf.seek(0)
-            msvcrt.locking(lockf.fileno(), msvcrt.LK_UNLCK, 1)
+            _lock_release(lockf)
 
 
 def save_raw(rel: str, obj) -> None:
@@ -116,11 +137,8 @@ def szse_lock_held_by_other() -> bool:
     for lk in (NODE / 'lhb' / '.backfill.lock', LOCK_FP):
         if lk.exists():
             try:
-                import ctypes
                 pid = int(lk.read_text().strip())
-                h = ctypes.windll.kernel32.OpenProcess(0x00100000, False, pid)
-                if h:
-                    ctypes.windll.kernel32.CloseHandle(h)
+                if pid_alive(pid):
                     return True
             except (ValueError, OSError, AttributeError):
                 pass

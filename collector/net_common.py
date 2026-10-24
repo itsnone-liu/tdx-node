@@ -7,6 +7,7 @@
 """
 from __future__ import annotations
 import json
+import os
 import random
 import threading
 import time
@@ -170,3 +171,25 @@ class ThrottledClient:
 
 def qs(params: dict) -> str:
     return urllib.parse.urlencode(params, safe=',')
+
+
+def pid_alive(pid: int) -> bool:
+    """跨平台「PID 还活着吗」。Windows 用 OpenProcess，POSIX 用 os.kill(0)。
+    用途：锁文件里的 PID 判活（原实现硬编码 ctypes.windll，Linux 下必然
+    AttributeError → 被 except 吞掉 → 锁形同虚设）。"""
+    if pid <= 0:
+        return False
+    if os.name == 'nt':
+        import ctypes
+        h = ctypes.windll.kernel32.OpenProcess(0x00100000, False, pid)
+        if h:
+            ctypes.windll.kernel32.CloseHandle(h)
+            return True
+        return False
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
