@@ -2,17 +2,22 @@
 """米线（Linux）慢频链路每日驱动：采集 → 体检 → 打包 → 本地提交 → 整合 e5。
 
 链路（每一步都打时间戳/行数/PID，留证据）：
-  1) 采集  collector/daily_incremental.py --dates <窗口内交易日逗号表> --no-normalize
+  1) 采集  collector/daily_incremental.py --dates <窗口内交易日逗号表>
            COMPLETE 日自动跳过；margin/szse 零行在 7 天内可重试 → 天然补漏
+           **含全量 normalize**（2021-01-04→今 raw 已全量落盘，csv 摘要全量重建）
   2) 体检  lhb/backfill_state.json + blockmargin/backfill_state.json → 逐日逐数据集
            COMPLETE / PENDING（未挂）；写 $NODE/last_run_status.json
   3) 打包  make_year_archive.py --stage <stock-data> --years <天数覆盖的年份>
            确定性年包 + MANIFEST（sha256）
+  3.5) csv 同步  NODE/{lhb,blockmargin}/csv → <stock-data>/csv + MANIFEST csv 段 sha256 刷新
   4) 提交  git -C <stock-data> add -A && commit（**仅本地**；push 必须老刘批准）
   5) 整合  stock-selector-v2/scripts/h_slowdata_pull.sh --local
            → MANIFEST 闸门 → rsync data/r2/e5/ → 重建 e5.db（含行数膨胀绊线）
+  6) 交叉核对  lhb_crosscheck_tdx.py（TDX 客户端 lhb*.json vs 官方 csv）；
+           无 lhb*.json 则跳过（等 Windows 定期同步）
 
-节奏（老刘定）：每日 19:40 主跑（--window 10）；周一 08:00 补「未挂」漏项（--catchup，--window 21）
+节奏（老刘定，2026-10-24 调整）：每日 21:00 主跑（--window 10，避开 R2 19:30 链）；
+周一 08:00 补「未挂」漏项（--catchup，--window 21）
 
 用法：
   export TDX_NODE=/root/slowdata/node
@@ -153,6 +158,57 @@ def print_gate(g: dict, days: list[str]) -> None:
               flush=True)
 
 
+# ------------------------------------------------------------------ csv 同步
+def csv_sync(all_csv: bool = False) -> bool:
+    """NODE 的 csv 摘要（全量 normalize 产物）→ STAGE/csv + 刷新 MANIFEST csv 段 sha256。
+
+    默认只收 lhb 组（DATASET_META.json + lhb_seats.csv + lhb_daily_stock.csv）——
+    与老归档 csv 段口径一致；block_trades/margin_daily 体量大（~600MB）且下游零消费，
+    留在 NODE 不版本化（--csv-all 可强制全收）。
+    """
+    import hashlib
+    dst = STAGE / 'csv'
+    dst.mkdir(parents=True, exist_ok=True)
+    entries: dict = {}
+    copied = 0
+    dirs = [LHB / 'csv', BM / 'csv'] if all_csv else [LHB / 'csv']
+    for src in dirs:
+        if not src.exists():
+            continue
+        for fp in sorted(src.iterdir()):
+            if fp.suffix.lower() not in ('.csv', '.json'):
+                continue
+            data = fp.read_bytes()
+            tgt = dst / fp.name
+            if (not tgt.exists()) or tgt.read_bytes() != data:
+                tgt.write_bytes(data)
+                copied += 1
+            entries[f'csv/{fp.name}'] = {
+                'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()}
+    man_fp = STAGE / 'MANIFEST.json'
+    if man_fp.exists():
+        man = json.loads(man_fp.read_text(encoding='utf-8'))
+        man['csv'] = [dict(path=k, **v) for k, v in sorted(entries.items())]
+        man_fp.write_text(json.dumps(man, ensure_ascii=False, indent=1),
+                          encoding='utf-8')
+    log(f'csv 同步: {len(entries)} 个文件, 实际更新 {copied} 个 → {dst}')
+    return True
+
+
+# ------------------------------------------------------------------ 交叉核对
+def crosscheck():
+    """TDX 客户端 lhb*.json vs 官方 lhb_seats.csv 对拍；无产物则跳过（返回 None）。"""
+    tdx_dir = NODE / 'tdx-tq-v773' / 'PYPlugins' / 'data'
+    files = sorted(tdx_dir.glob('lhb*.json')) if tdx_dir.exists() else []
+    if not files:
+        log(f'交叉核对: 跳过（{tdx_dir} 无 lhb*.json；等 Windows 定期同步）')
+        return None
+    ok, _ = sh([PY, str(NODE / 'collector' / 'lhb_crosscheck_tdx.py')],
+               f'交叉核对 {len(files)} 个 TDX 文件 vs 官方 csv', timeout=1800)
+    log(f'交叉核对: {"PASS" if ok else "FAIL"}')
+    return ok
+
+
 # ------------------------------------------------------------------ 主流程
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -161,6 +217,11 @@ def main() -> int:
     ap.add_argument('--date', help='目标交易日 YYYYMMDD，默认=最近交易日')
     ap.add_argument('--window', type=int, default=None,
                     help='回看自然日窗口，默认 10（catchup 21）')
+    ap.add_argument('--no-normalize', action='store_true',
+                    help='应急：跳过 csv 全量重建（仅 raw 不全时用）')
+    ap.add_argument('--csv-all', action='store_true',
+                    help='csv 同步时连 block_trades/margin_daily 一起入归档（默认只收 lhb 组）')
+    ap.add_argument('--no-crosscheck', action='store_true')
     ap.add_argument('--no-pack', action='store_true')
     ap.add_argument('--no-commit', action='store_true')
     ap.add_argument('--no-integrate', action='store_true')
@@ -194,7 +255,8 @@ def main() -> int:
     arch = NODE / 'collector' / 'make_year_archive.py'
     pull = SSV2 / 'scripts' / 'h_slowdata_pull.sh'
     plan = [
-        [PY, str(di), '--dates', ','.join(days), '--no-normalize'],
+        [PY, str(di), '--dates', ','.join(days)]
+        + (['--no-normalize'] if args.no_normalize else []),
         [PY, str(arch), '--stage', str(STAGE), '--years', ','.join(years)],
         ['bash', str(pull), '--local'] + (['--force'] if args.force_integrate else []),
     ]
@@ -233,6 +295,12 @@ def main() -> int:
         ok_pack, _ = sh(plan[1], f'打包 {years} 年包 (+MANIFEST)',
                         timeout=1800)
 
+    # ---- 3.5) csv 摘要入归档（含 MANIFEST csv 段刷新）
+    if not args.no_normalize:
+        csv_sync(all_csv=args.csv_all)
+    else:
+        log('--no-normalize: 跳过 csv 同步')
+
     # ---- 4) 本地提交（push 需批准）
     commit_hash = None
     if not args.no_commit:
@@ -267,6 +335,10 @@ def main() -> int:
     if not args.no_integrate:
         ok_integ, _ = sh(plan[2], '整合: 闸门+同步+h_slowdata_pull --local',
                          timeout=3600)
+
+    # ---- 6) 交叉核对（有 TDX 侧产物才跑）
+    if not args.no_crosscheck:
+        crosscheck()
 
     dt = time.time() - t_start
     log(f'=== SUMMARY mode={"catchup" if args.catchup else "daily"} target={target} '
