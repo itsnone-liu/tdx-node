@@ -162,13 +162,21 @@ def print_gate(g: dict, days: list[str]) -> None:
 def csv_sync(all_csv: bool = False) -> bool:
     """NODE 的 csv 摘要（全量 normalize 产物）→ STAGE/csv + 刷新 MANIFEST csv 段 sha256。
 
-    默认只收 lhb 组（DATASET_META.json + lhb_seats.csv + lhb_daily_stock.csv）——
+    默认只收 lhb 组（DATASET_META.json + lhb_daily_stock.csv）——
     与老归档 csv 段口径一致；block_trades/margin_daily 体量大（~600MB）且下游零消费，
     留在 NODE 不版本化（--csv-all 可强制全收）。
+    **lhb_seats.csv 也不入归档**：全量重建后 244MB，超 GitHub 单文件 100MB 上限；
+    该文件是 raw 的派生品（可由 lhb_raw 随时重建）， canonical 副本留 NODE/lhb/csv/。
     """
     import hashlib
     dst = STAGE / 'csv'
     dst.mkdir(parents=True, exist_ok=True)
+    # 归档内排除 lhb_seats.csv（>100MB 超 GitHub 上限）；顺手清掉 STAGE 残留防复发
+    EXCLUDE = {'lhb_seats.csv'}
+    for stale in dst.iterdir():
+        if stale.name in EXCLUDE and stale.is_file():
+            stale.unlink()
+            log(f'csv 同步: 移除归档内排除项 {stale.name}')
     entries: dict = {}
     copied = 0
     dirs = [LHB / 'csv', BM / 'csv'] if all_csv else [LHB / 'csv']
@@ -176,6 +184,8 @@ def csv_sync(all_csv: bool = False) -> bool:
         if not src.exists():
             continue
         for fp in sorted(src.iterdir()):
+            if fp.name in EXCLUDE:
+                continue
             if fp.suffix.lower() not in ('.csv', '.json'):
                 continue
             data = fp.read_bytes()
